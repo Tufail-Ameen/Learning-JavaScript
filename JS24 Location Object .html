@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Object</title>
+    <style></style>
+  </head>
+
+  <body>
+    <button id="btn" onclick="fun()">Redirect</button>
+
+    <script>
+      // Location object 1 trha ka window ka sub object ha.
+      // use kia jata current page ka address nikalny ky leay mtlb
+      // url ko get krny ky leay
+      // url ky bary my information nikalny ky laey.
+      // or browser ko redirect krwany ky leay ... 1 url sy dosry url my chly jay.
+      // mtlb current url ky bary my information jan ny or dosra redirect krna.
+
+      // How we access ?
+      // Hm asy access kry gy ...
+      // window.location.
+      // window by default b hota na b likho frk ni prta
+      // location.
+      // url sy related asy information nikala jata
+
+      // properties:
+      console.log(location.href);
+      console.log(location.pathname);
+      console.log(location.protocol);
+
+      // Redirect krny ky 3 methods:
+      // Methods:
+
+      function fun() {
+        // 1st method
+        // window.location = "https://www.google.com";
+        // 2nd method
+        // location.href = "https://www.google.com";
+        // 3rd method ... Assign method ... jb hm 1st or second method use krty hain to b yahi assign method call hota ha ...
+        // location.assign("https://www.google.com");
+        // 4th replace method ... is my b hm google pr ponch jay gy lkin wapis back option ni ata is my
+        // location.replace("https://www.google.com");
+        // page ko reload krny leay 1 method ha koi parameter pass ni krna is my ... ab ap button pr click kro gy to reload ho ga
+        // location.reload();
+      }
+
+      // Assign method kya krta ap ky browser ke history my entry dalta ha ...
+      // lkin replace method ap ky browser ke history my entry ni dalta ... issi leay back ka button ni ata is my
+    </script>
+  </body>
+</html>

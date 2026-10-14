@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Object</title>
+  </head>
+
+  <body>
+    <script>
+      // Nested Object
+      // Creating a nested object
+      var person = {
+        name: "John Doe",
+        age: 30,
+        address: {
+          street: "123 Main Street",
+          city: "New York",
+          state: "NY",
+          zip: "10001",
+        },
+        hobbies: ["reading", "gaming", "coding"],
+      };
+
+      // Accessing nested object properties
+      console.log(person.name); // Output: John Doe
+      console.log(person.address.street); // Output: 123 Main Street
+      console.log(person.hobbies[0]); // Output: reading
+
+      // Modifying nested object properties
+      person.age = 35;
+      person.address.city = "Los Angeles";
+      person.hobbies.push("painting");
+
+      // Adding new properties to nested objects
+      person.address.country = "USA";
+      person.job = "Software Engineer";
+
+      console.log(person.age); // Output: 35
+      console.log(person.address.city); // Output: Los Angeles
+      console.log(person.hobbies); // Output: ["reading", "gaming", "coding", "painting"]
+      console.log(person.address.country); // Output: USA
+      console.log(person.job); // Output: Software Engineer
+    </script>
+  </body>
+</html>

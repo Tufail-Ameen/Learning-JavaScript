@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <div class="container">
+        This is Arrow Functions Teturial
+    </div>
+    <script>
+        // It's a short cut
+
+        // In Simply way Function
+        function greet() {
+            console.log("Good Morning Simple Function");
+        }
+        greet();
+
+        // Arrow Function
+        let greet1 = () => {
+            console.log("Good Morning Arrow Function");
+        }
+        greet1();
+
+        // Mostly used with in Set time out
+        setTimeout(() => {
+            console.log("We are inside set time out");
+        }, 3000);
+
+        // Arrow Function
+        let sum = (a, b) => {
+            return a + b;
+        };
+
+        // Short cut ka b short cut return b khtm kr do
+        let sum2 = (a, b) => a + b;
+        // or short cut bracket b na lgayo mtlb agr 1 argument ha to bracket lgany ke zrorat ni ha 2 ha to lgani ha bracket
+        let half = a => a / 2;
+
+        // Jo sb sy phly bnaya tha function wo dakhty hain short cut sy without brackets
+        let greet5 = () => console.log("Good Morning");
+        greet5();
+
+        // Laycila this ?
+        // => Agr 1 obj bnaya    us ky andr function bnaya   us ky andr arrow function use krty o to jo this hota ha     wo parent ka this hota ha
+        // lkin agr arrow function use ni kea to function ka apna this hota ha.
+
+    </script>
+</body>
+
+</html>

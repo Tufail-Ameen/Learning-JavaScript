@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Adjacent HTML</title>
+</head>
+
+<body>
+    <!-- before begin -->
+    <div id="intro">
+        <!-- after begin -->
+        <h2>Headig</h2>
+        <p>This is p tag</p>
+        <!-- before end -->
+    </div>
+    <!-- after end -->
+
+    <script>
+        // Powerfull / 4 positions pr adjuct kr skty hain / insert krny ky leay create element krny ke koi zrorat ni ha is my 
+        // 4 positions pr set kr skty hain.
+        // 1 before begin      jha id lgai us sy phly text add kr dy ga.
+        // 2 after begin       jha id lgai us ky bad  text add kr dy ga.
+        // 3 before end        jha id wala tag khtm ho ra us sy phly text add kr dy ga.
+        // 4 after end         jha id wala tag khtm ho ra us sy bad text add kr dy ga.
+
+        // use
+
+        let a = document.getElementById("intro");
+        let text = "<h1>New h1</h1>";
+
+        a.insertAdjacentHTML("beforebegin", text);
+
+
+
+        let b = document.getElementById("intro");
+        let text1 = "<h2>New h2</h2>";
+
+        b.insertAdjacentHTML("afterbegin", text1);
+
+
+
+        let c = document.getElementById("intro");
+        let text2 = "<h3>New h3</h3>";
+
+        c.insertAdjacentHTML("beforeend", text2);
+
+
+
+        let d = document.getElementById("intro");
+        let text3 = "<h4>New h4</h4>";
+
+        d.insertAdjacentHTML("afterend", text3);
+
+    </script>
+</body>
+
+</html>

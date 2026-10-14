@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6</title>
+  </head>
+
+  <body>
+    <script>
+      // Topic ES6 Default parameter
+      function talk(msg) {
+        console.log(msg);
+      }
+      talk("mian");
+
+      // talk my pass kea mian to print ho gya mian agr kuch b ni pass krty to undefined ata.
+      // hm chahty hain undefined na aay by default kuch value set kr do. default parameter sert kr do.
+      // aopr e set kr dain gy hm.
+
+      function talk(msg = "Tufail Arshi") {
+        console.log(msg);
+      }
+      talk();
+
+      // Topic ES6 REST PARAMETER
+      function sum(a, b) {
+        return a + b;
+      }
+
+      sum(2, 3); //5
+
+      // yha hm ny 2 arguments pass keay a,b nichy 2 parameter pass keay 2,3 hm chahty hain hm phly define na kry a b kitny hm jitni mrzi values put kry Ans mil jay hmy is ky leay hm REST PARAMETER use krty hain.
+
+      function sum(...args) {
+        //jo b cheas ap rest parameter sy declair krty o ... sy wo array bn jata ha ab args array bn gya.
+        console.log(args);
+      }
+
+      sum(); //output is time blank array ha.
+      sum(2);
+      sum(2, 5);
+      sum(4, 7, 8);
+      sum(25, 48, 52, 87);
+
+      // array ko kasy itrate krty hain ?
+
+      function sum(...args) {
+        let result = 0;
+
+        for (let i = 0; i < args.length; i++) {
+          result += args[i];
+        }
+
+        console.log(result);
+      }
+
+      sum(2);
+      sum(2, 5);
+      sum(4, 7, 8);
+      sum(25, 48, 52, 87);
+
+      // Topic ES6 Spread Operator.
+
+      // Spread Operator b 3 dots ... sy e define hota ha.
+      // Array ko spread krny ky leay use hota ha
+
+      // kisi b array ko kisi b array my add kr skty    1st ko 3rd my    2nd ko 1sy my    start , center , end pr khi b kr skty hain add.
+      let array1 = [1, 2, 3];
+      let array2 = [4, 5, 6, ...array1]; //end
+      let array3 = [...array1, 7, 8, 9]; //start
+      let array4 = [15, 86, 53];
+      let array5 = [14, 85, ...array4, 52]; //center
+      let array6 = [...array1, ...array4]; // add 2 arrays
+
+      console.log(array2);
+      console.log(array3);
+      console.log(array5);
+      console.log(array6);
+
+      // Topic ES6 FOR-OF
+      let score = [80, 39, 70, 54];
+      for (let x of score) {
+        console.log(x);
+      }
+
+      // Topic ES6 Template Literals
+      // Template Literals ES6 my include kea gya tha.
+
+      let t = "Hello \nWord"; // if we want space b/t string hello word.
+      console.log(t);
+
+      // dakhty hain Template Literals issy kasy solve krta ha wo string ko single ya double '' "" my ni likhta ...... wo kam krta ha batcit `` ES6 ky bad hm string ko batcit sy b bna skty or \n for new line ke zrorat ni ha /is my
+
+      let p = `Hello 
+Word
+Thank You`;
+      console.log(p);
+
+      let i = "Tufail Arshi";
+      console.log(`My name is ${i}.`);
+
+      //phly hm concatinate use krty thy + sign ab bactis my ${} use kr ky kr skty... yha 2 dfa concatenate krna prna tha.
+
+      // TOPIC ES6 Array Destructuring
+      let a, b, rest;
+      [a, b] = [10, 20];
+
+      console.log(a);
+      // Expected output: 10
+
+      console.log(b);
+      // Expected output: 20
+
+      [a, b, ...rest] = [10, 20, 30, 40, 50];
+
+      console.log(rest);
+    </script>
+  </body>
+</html>

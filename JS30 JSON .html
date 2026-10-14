@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSon in Jave script</title>
+</head>
+
+<body>
+    <div class="container">
+        This is my container
+    </div>
+
+    <script>
+        // =>Json stand for Jave script object notation.
+        // =>format used to store or transport data.
+        // =>java script my agr hm ny koi object bnaya ya koi data ha    
+        // or hm chahty hain usy transport krna usy over a network 1 string format ky tor pr usy baj skty hain.
+
+        let Jsonobj = {
+            name: "Mian Tufail",
+            channel: "Code with Tufail",
+            Friend: "Ismail Jutt",
+            Food: "Bindi"
+        };
+        console.log(Jsonobj);
+
+        // =>sb sy phly 1 Json object bnaya
+        // =>ab usy transport krna ha network ky through
+        // =>Stringify ka mtlb string my convert krna
+        // ab hm is json object ko stringify kry gy
+        // Stringify
+
+        let myjonstr = JSON.stringify(Jsonobj);
+        console.log(myjonstr);
+
+        // =>Json object sy string my convert ho chuka
+        // ab jo jo kam ma string ky sth krta hn     wo is ky sth kr skta hn     koi b function lga skta     jo jo hm 1 string pr lgatya hain.
+
+        // String bn gaey String pr Replace Function lgana 
+        let replace = myjonstr.replace("Mian Tufail", "Mian Usman")
+        console.log(replace);
+
+
+        // Again Convert to object
+        // use JSON.PARS to convert string into object
+
+        // Parse
+        let againobj = JSON.parse(replace);
+        console.log(againobj);
+
+        // =>obj ko string my convert krny ky leay ?
+        // stringify use
+        // =>string ko obj my convert krny ky leay ?
+        // parse
+
+    </script>
+
+
+</body>
+
+</html>

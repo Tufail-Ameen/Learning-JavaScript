@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox tetorial</title>
+    <style>
+        .container{
+            height: 544px;
+            width: 100%;
+            border: 4px solid black;
+            display: flex;
+
+        /* Flex Properties for flex container */
+        /* flex-direction: row; */
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column-reverse; */
+            
+       
+        
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            justify-content: space-around;
+
+            align-items: center;
+            /* align-items: flex-end; */
+        }
+        .item{
+            background-color: rgb(228, 26, 26)  ;
+                border: 2px solid black;
+                margin: 20px;
+                padding: 3px;
+                width: 200px;
+                height: 200px;
+        }
+        /* AFTER THIS HIDE 3 BOXES TO UNDER STAND NEXT STAGES */
+        #item1{
+            order: 2;
+            flex-grow: 2;
+        }
+        #item2{
+            order: 50;
+            flex-grow: 3;
+            flex-shrink: 3;
+        }
+        #item3{
+            order: 5;
+            flex-shrink: 5;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox teturial</h1>
+    <div class="container">
+        <div class="item" id="item1">First Box</div>
+        <div class="item" id="item2">Second Box</div>
+        <div class="item" id="item3">Third Box</div>
+        <!-- <div class="item" id="item4">Fourth Box</div>
+        <div class="item" id="item5">Fifth Box</div>
+        <div class="item" id="item6">Sixth Box</div> -->
+        
+        </div>
+</body>
+</html>

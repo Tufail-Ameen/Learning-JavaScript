@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Events</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" id="myinput">
+    </form>
+    <script>
+        // Focus Event or blur Event ?
+        let a = document.getElementById("myinput");
+
+        a.addEventListener("focus", myFocusFunction);
+        a.addEventListener("blur", myBlurFunction);
+
+        function myFocusFunction() {
+            a.style.background = "yellow"
+        };
+
+        function myBlurFunction() {
+            a.style.backgroundColor = "white"
+        };
+
+        // Change Event ?
+        // imp question ? diff b/t change event or input event ?
+        // detect krna ky input field my kuch change aya ha...   mtlb ya ky
+        // jasy e ya event likhny ky bad ap bahir click kry gy to console my print ho jay ge wo value jo input ke ho ge ap ny...
+        // jb jb ap value change kro gy tb tb print ho ga bs...
+        // agr same value pr dbra click kro gy to ni ho ga change...
+
+        a.addEventListener("change", function () {
+            console.log(this.value);
+        });
+
+
+        // input event:
+        // jb jb ap input kro gy value tb tb print ho ga bs ... foran ho jay ge value change ... bhir click b ni krna pry ga change event sy differt ha ya ...
+
+        // a.addEventListener("input", function () {
+        //     console.log(this.value);
+        // });
+
+    </script>
+</body>
+
+</html>

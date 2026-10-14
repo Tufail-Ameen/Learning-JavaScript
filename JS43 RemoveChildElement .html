@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Child Element</title>
+</head>
+
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About Us</li>
+        <li>Usman</li>
+        <li>Tufail</li>
+        <li>Arshi</li>
+        <li>Faisal</li>
+
+    </ul>
+
+    <script>
+        // child ko remove krny ky leay b target parent ky through krna ha
+
+        // remove Home
+
+        let a = document.getElementById("menu");
+        let b = a.firstElementChild;
+        a.removeChild(b);
+
+        // remove Product
+
+        let c = document.getElementById("menu");
+        let d = c.firstElementChild.nextElementSibling;
+        c.removeChild(d);
+
+        // remove ul
+        // let y = document.getElementById("menu");
+        // document.body.removeChild(y);
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and Event Capturing</title>
+    <style>
+        body {
+            padding: 100px;
+            background-color: yellow;
+        }
+
+        #container {
+            padding: 50px;
+            background-color: darkblue;
+            height: 200px;
+            position: relative;
+            top: 100px;
+
+        }
+
+        #btn {
+            position: relative;
+            left: 400px;
+            top: 100px;
+            font-size: 30px;
+            border-radius: 100%;
+            height: 50px;
+            width: 120px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- body ky andr div bnana or div ky andr button ... body div button sb pr event lgana
+    body pr click kry gy to body wala event occcur ho ga / div pr click kry gy to body wala or div wala dono event occur ho ga / 
+    or button pr click kry to body, div or button sb event occur ho gy ...
+    swal ya ha ma agr button pr click krta hn to sb sy phly kn sa event activate ho ga ??? body / div ya button ? -->
+    <!-- Ans: apni mrzi sy krwa skty hain ... jasy mrzi to issi ka nam ha event bubbling and event capturing  -->
+
+    <!-- Event bubbling ?
+    is my ya hota sb sy phly sb sy andr wala active ho ga is case my button.
+
+    Event Capturing ?
+    is my ult ha sb sy phly document phr html phr body phr div phr button. -->
+
+    <!-- syntax: add event listener(event,function,true or false)
+    by default false hota ha jis ka mtlb ha event bubbling jis ka mtlb ha andr sy bhir ke trf
+    agr hm true kr dain gy to event capturing ho jay ga jis ka mtlb bhir sy andr ke trf -->
+
+    <div id="container">
+        <button id="btn">
+            Inbox
+        </button>
+    </div>
+
+
+    <script>
+
+        // Example of Bubbling ...
+
+        // let d = document.getElementById("container");
+        // let b = document.getElementById("btn");
+
+        // b.addEventListener("click", btnclick);
+        // d.addEventListener("click", divclick);
+        // document.body.addEventListener("click", bodyclick);
+
+        // function btnclick() {
+        //     console.log("Button Clicked");
+        // };
+
+        // function divclick() {
+        //     console.log("div Clicked");
+        // };
+
+        // function bodyclick() {
+        //     console.log("Body Clicked");
+        // };
+
+
+
+
+
+        // ma chahta hn ky button pr click kro or bs udr e ruk jay baki div or body na run ho to ?
+        // to 1 parameter pass kry gy or function use kry gy stop propagetion like this
+
+
+
+
+        // let d = document.getElementById("container");
+        // let b = document.getElementById("btn");
+
+        // b.addEventListener("click", btnclick);
+        // d.addEventListener("click", divclick);
+        // document.body.addEventListener("click", bodyclick);
+
+        // function btnclick(event) {
+        //     console.log("Button Clicked");
+        //     event.stopPropagation();
+        // };
+
+        // function divclick() {
+        //     console.log("div Clicked");
+        // };
+
+        // function bodyclick() {
+        //     console.log("Body Clicked");
+        // };
+
+
+
+
+
+        // Example of capturing ...
+
+        let d = document.getElementById("container");
+        let b = document.getElementById("btn");
+
+        b.addEventListener("click", btnclick, true);
+        d.addEventListener("click", divclick, true);
+        document.body.addEventListener("click", bodyclick, true);
+
+        function btnclick() {
+            console.log("Button Clicked");
+        };
+
+        function divclick() {
+            console.log("div Clicked");
+        };
+
+        function bodyclick() {
+            console.log("Body Clicked");
+        };
+
+
+
+
+        // kisi 1   2   pr  b true lga skty hain.
+
+    </script>
+</body>
+
+</html>

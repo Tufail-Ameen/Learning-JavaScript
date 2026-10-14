@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Attribute</title>
+  </head>
+
+  <body>
+    <!-- Attribute kya hota ha ? kisi b element ky andr jb hm asy equal to kr ky value daty hain usy attribute khty hain 
+    id class src href alt style -->
+
+    <button id="btn" name="foam1" roll-no="bsf1800523">save</button>
+
+    <script>
+      // new attribute kasy add kr skty hain ?
+      // set attribute use kry gy
+      // 2 parameter pass hota is my phla name or dosra value
+
+      let a = document.getElementById("btn");
+
+      a.setAttribute("class", "mian");
+
+      // jo attribute add ha alreday html my us ke value kasy pta kr skty ?
+      // use get attribute
+
+      let x = a.getAttribute("name");
+      console.log(x);
+
+      // name ke value ya ha jo html my de hoi ha hm ny find kr le ha
+
+      // jo attribue add ha already html my usy kasy remove kr skty hain ?
+      // use remove attribute
+
+      a.removeAttribute("roll-no");
+
+      // kasy check kry gy ky ya attribute ha b ya ni ?
+      // us ky leay hmary pas 1 function hota has attribute us sy check kry gy
+      // 1 kism ka ya has function question puch ra ky attribue ha ya ni ?
+      // agr ho ga to console my true print kry ga
+      // agr ni ho ga to false print kry ga.
+
+      let y = a.hasAttribute("name");
+      console.log(y);
+
+      let z = a.hasAttribute("class");
+      console.log(z);
+
+      let p = a.hasAttribute("mian");
+      console.log(p);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+        var str = "This is a String";
+        console.log(str);
+
+        // indexOf function
+        var position = str.indexOf('is');
+        console.log(position);
+
+        // lastIndexOf function
+        var position = str.lastIndexOf('is');
+        console.log(position);
+
+
+
+        // Substring from a string
+        var substr = str.slice(1, 9);
+        console.log(substr);
+
+        var substr = str.substring(1, 9);
+        console.log(substr);
+
+        var substr = str.substr(1, 9);
+        console.log(substr);
+
+
+
+        // Replace Function
+        var replaced = str.replace('String', 'Harry');
+        console.log(replaced);
+
+
+
+        // toUpperCase
+        console.log(str.toUpperCase());
+
+        // toLowerCase
+        console.log(str.toLowerCase());
+
+
+
+        // Concate Function
+        var newstring = str.concat(' new string');
+        console.log(newstring);
+
+        // Trim Function
+        var strwithwhitespaces = ("    this    contains     white      spaces        ");
+        console.log(strwithwhitespaces);     //white spaces a rhe hain yha
+        console.log(strwithwhitespaces.trim());  //white spaces khtm ho gaey idr trim function sy
+
+        // Character Function
+        var char8 = str.charAt(2);
+        console.log(char8);
+
+        // charcodeat Function:
+        var char8 = str.charCodeAt(2);
+        console.log(char8);
+
+        // slicling Function
+        console.log(str[3]);
+    </script>
+</body>
+
+</html>

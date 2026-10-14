@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays or Objects</title>
+</head>
+
+<body>
+    <div class="container">THIS IS HTML</div>
+
+    <script>
+        // What is object ?
+        // pair of key values.
+
+
+        // Create Object
+        let employee = {
+            name: "miantufail",
+            salary: 80000,
+            channel: "codewithharry",
+            channel2: "programmingwithharry"
+        }
+        console.log(employee);
+
+        // What is Array ?
+        // => Array is also a object but a special type of object.
+
+
+        // Array 1st method
+        let names = [1, 2, 3, "harry", undefined]
+        console.log(names)
+
+        // Access any of value in array ?
+        console.log(names[2])
+
+        // Array 2nd Method
+        let namess = new Array(1, 2, 3, "harry", undefined)
+        console.log(namess);
+
+        // lenght find
+        console.log(namess.length);
+
+        // Sort Array
+        let namesss = new Array(50, 40, 30, "harry", undefined)
+        namesss = namesss.sort();
+        console.log(namesss);
+
+
+        // Elements Add or Remove
+        // Pushed       jo hm chahty hain end pr likha jay
+        let namessss = new Array(50, 40, 30, "harry", undefined)
+        namessss.push("This is Pushed")
+        console.log(namessss);
+
+        // => Key my space ni dani kbi b wrna access krna muskil ho jay ga 
+        // => key name salary channel channel2 issy khty hain 
+
+        // Object
+        let employeee = {
+            name: "miantufail",
+            salary: 80000,
+            channel: "codewithharry",
+            channel2: "programmingwithharry"
+        }
+        console.log(employeee);
+
+        // => is ko agr hm chahty hain ky console my access kry to hm kr skty hain kisi ko b ya likh ky.
+
+        // employeee.channel    likh ky code with harry access ho jay ga
+        // employeee.sallary    likh ky 80000 access kr skty hain hm
+
+        //=> lkin agr glti sy b key my mtlb channel2 ky darmyan space a gya to access krny ka treeka b badl jay ga
+        //=> phly to likhty wky double corse lgany pry gy asy likhna pry ga "channel 2"
+        // or phr access krty wkt asyy access krna pry ga
+        // employeee['channel2']  asy access krna pry ga so is leay hmy key likhty wkt space ni dani
+
+
+        // empty spaces
+        let mango = new Array(23);
+        console.log(mango);
+
+    </script>
+</body>
+
+</html>

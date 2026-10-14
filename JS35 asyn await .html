@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asyn await</title>
+</head>
+
+<body>
+    <script>
+
+        // hm kisi b function ko async bna skty hain or us ky andr promices ko await krwa skty hain
+        // async function always return a promice
+        // jb ya promice return kr rha to hm .then to kr e skty hain
+        // .then kr skty o
+
+
+
+
+        // async function harry() {
+        //     return 5
+        // }
+
+
+        // harry().then((x) => {
+        //     alert(x)
+        // })
+
+
+
+
+        // 1 treeka to ya ha to hm ny phly b dakha howa 1 1 kr ky.then kr do...
+
+
+
+
+        // async function mian() {
+        //     let Lahore_Weather = new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("25 deg")
+        //         }, 1000);
+        //     })
+
+        //     let Karachi_Weather = new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("28 deg")
+        //         }, 3000);
+
+        //     })
+
+        //     Lahore_Weather.then((value) => {
+        //         console.log(value)
+        //     })
+
+        //     Karachi_Weather.then((value) => {
+        //         console.log(value)
+        //     })
+        // }
+        // console.log("Welcome to weather control room")
+        // mian()
+
+
+
+
+        // kya koi is sy bhtr treeka ha ? yes
+
+
+
+
+        async function mian() {
+            let Lahore_Weather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("25 deg")
+                }, 5000);
+            })
+
+            let Karachi_Weather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("28 deg")
+                }, 7000);
+
+            })
+
+            // await krwata jb tk 1 promice ke value resolve ni hoti agy ni jana ... phly 1st promice resolve kro than agy jana ... mtlb promice ke exiciution ko rok dea 1 trha ka.
+
+            let Lahore = await Lahore_Weather
+            let karachi = await Karachi_Weather
+            return [Lahore_Weather, Karachi_Weather]
+        }
+
+        console.log("Welcome to weather control room")
+
+        // await 1 promice return krta ha ya dakho promice return kr rha ha
+        let a = mian()
+        console.log(a)
+
+
+
+    </script>
+
+</body>
+
+</html>

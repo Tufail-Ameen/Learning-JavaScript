@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATTRIBUTE AND Nth CHILD PSUDO SELECTORS</title>
+    <style>
+        input {
+            display: block;
+        }
+
+        .container {
+            display: block;
+            width: 233px;
+            margin: auto;
+        }
+
+        input[type='text'] {
+            padding: 23px;
+            border: 4px solid red;
+        }
+
+        a[target='_blank'] {
+            font-size: 34px;
+            color: violet;
+        }
+
+        a[target='_self'] {
+            font-size: 34px;
+            color: orange;
+        }
+
+        input[type='email'] {
+            background-color: antiquewhite;
+            font-weight: bolder;
+        }
+
+        li:nth-child(3) {
+            background-color: black;
+            color: white;
+        }
+
+        li:nth-child(even) {
+            background-color: blue;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="https://www.google.com/" target="_blank">GO to Google</a></h1>
+        <h1><a href="https://www.facebook.com/" target="_self">GO to Facebook</a></h1>
+        <form action="" class="formcontrol">
+            <input type="text" placeholder="enter your name">
+            <input type="email" name="my email" placeholder="enter your email">
+            <input type="pasward" placeholder="enter your pasward">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">Iten 1</li>
+            <li class="item" id="item-2">Item 2</li>
+            <li class="item" id="item-3">Item 3</li>
+            <li class="item" id="item-4">Item 4</li>
+            <li class="item" id="item-5">Item 5</li>
+            <li class="item" id="item-5">Item 6</li>
+            <li class="item" id="item-5">Item 7</li>
+            <li class="item" id="item-5">Item 8</li>
+            <li class="item" id="item-5">Item 9</li>
+            <li class="item" id="item-5">Item 10</li>
+        </ul>
+    </div>
+</body>
+
+</html>

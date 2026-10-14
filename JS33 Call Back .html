@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Java Script / Call Back</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Topics For Interview:
+        // 1 Time out and Time intervals
+        // 2 Callbacks
+        // 3 Promises
+        // 4 async await
+        // 5 Event Loop
+
+
+        // setTimeout(() => {
+        //     for (let i = 0; i < 5000; i++) {
+        //         console.log("This is i number " + i);
+        //     }
+        // }, 1000);
+
+
+        // console.log("Done Printing");
+
+
+
+        // Done printing tb tk ni print ho ga jb tk loop pora 5000 tk chl na jay .. Ma chahta hn done printing likha a jay side by side loop b chlta rhy
+        // to ma kya use kro ga ? set time out    is sary ko utha ky set time out function ky andr daal dn ga     set time out wala hota rhy ga ap agy ka kam kro    ya Async bn gya ab
+
+
+
+
+        // Questions ?
+        // What and why of async javascript ?
+        // understand and solve exercise problems on timeouts, callbacks, promises, and async await ?
+        // understand how all of them behave with respect to the event loop ?
+
+        // What and why of async javascript ?
+        // async use is leay krty hain user ke 1 req krta code with harry.com sy page ly ky ayo
+        // wo chl ra sth sth background my wo khty
+        // google .com sy page ly ky ayo
+        // wo chl ra sth sth background my wo khty
+        // DOM manipulate kr do
+        // at a time server my kafi sari req chli jati hain
+
+        // IN ASYNC MULTIPLE THINGS TO HAPPEN AT THE SAME TIME
+        // IN SYNC THINGS HAPPEN ONE AT A TIME
+
+        // sync my agr hm ny koi function run kea "get data" nam ka function ha usy call kea to ho ga ya "get data"
+        // ky andr jo b cheas likhi hoi ha wo hoti rhy ge hoti rhy ge .or return tb e kry ga jb sara ka sara kam
+        // function ky andr wala ho jay ga
+
+
+
+
+
+
+
+
+
+
+        // 3 METHODS TO WRITE ASYNS CODE ?
+
+        // 1 Callbacks
+        // 2 Promises
+        // 3 async await
+
+
+
+
+
+
+        // Next Topic Call Back in java script
+
+        // // What is sync java script eg
+        // let a = prompt("What is your name ?")
+        // let b = prompt("What is your age ?")
+        // let c = prompt("What is your favorite color ?")
+        // console.log(a + " is " + b + " years old and has " + c + " favoriate color")
+        // // 1 cheas run kry ge phr agli phr agli phr agli asy
+
+
+
+        // // What is async java script eg
+        // console.log("Start")
+
+        // setTimeout(() => {
+        //     console.log("mid")
+        // }, 3000);
+
+        // console.log("end")
+        // // is my dakho mid waly pr 1 kism ka timer lga dea ha wo bad my chly ga pgly start chly ga phr end bad my mid
+
+
+
+        // Call Back Function
+        // create load script from chatgpt
+        // error is wjha sy a ra ku ky load script 2 dfa likhi hoi ha
+
+        // function loadScript(src) {
+        //     var script = document.createElement('script');
+        //     script.src = src;
+        //     script.onload = function () {
+        //         console.log("Loaded Script with SRC " + src);
+        //     }
+        //     document.body.appendChild(script);
+        // }
+
+        // loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js")
+
+
+        // console my show ni ho re script
+        // ab hm kuch asa krty hain ky jb script load ho to hmy pta chl jay mess a jay
+        // "script.onload" function lgana aopr us my likh dana jo b run krna ha
+
+
+        // ab ma chahta hn wo onload function ky sth koi custom function b load kro
+        // ma chahta hn ma custom function run kro
+
+
+        function loadScript(src, callback) {
+            var script = document.createElement('script');
+            script.src = src;
+            script.onload = function () {
+                console.log("Loaded Script with SRC " + src);
+                callback();
+            }
+            document.body.appendChild(script);
+        }
+
+        function hello() {
+            console.log("Mian g Attach Function")
+        }
+
+        loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js", hello)
+
+
+        // ma chahta hn bootstrap wali script ky sath hello wala function run krna chahiay
+        // to is my agy likh dn ga function ka name
+        // or aopr script my call back likhna
+        // or phr call back ko run b krna aopr
+
+
+        // script.onload ke gajha hm script.onerror b kr skta hn
+        // agr hm script asi likh dain jo exist e ni krti
+        // to script.onerror my function ban ky wo mess likh dain jo print krwana chahty hain like
+        // error loaing script etc
+
+        // Error handling b issi topic ka hissa ha lkin thora muskil ha abi ma ny chor dea wsy script.onload jha wha script.on error
+
+
+        // Call back hell and Pramid of Doom ?
+        // Call back ni use krni chahiay ku ky is my hm pory ka pora control pkra daty hain .. pora function kisi ko pkra daty hain jo ky load script ky bad hm run krty hain.
+        // to us ka solution kya ha phr ? promices
+
+        // praimd of Dom ?
+        // Code horizontally grow krta jata ... Read able ni rhta ... load script ky andr new load script  us ky andr or us ky andr or so on ....is trha read able b ni rhta
+        // is leay hm Promices use kry gy
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Computed CSS</title>
+  </head>
+
+  <style>
+    #btn {
+      background-color: red;
+      color: white;
+    }
+  </style>
+
+  <body>
+    <button id="btn">INBOX ME</button>
+    <script>
+      // Get Computed CSS mtlb agr ap dakhna chahty ho kn kn sa css ka kam kr ra to dakh skty o
+      let a = document.getElementById("btn");
+      let b = getComputedStyle(btn);
+      // ya sb wo ha jo bydefault lga hota
+      console.log(b);
+
+      // jo jo hm ny lgaya wo dakhny ky leay
+      console.log(b.color);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Java Script Crash Course</title>
+</head>
+
+<body>
+    <script>
+        // Topic
+        // 1 Clossure
+        // 2 Currying
+        // 3 this keyword
+        // 4 prototype
+        // 5 prototypal inheritance
+        // 6 Class
+        // 7 Iterables and Iterators
+        // 8 Generators
+
+        // Scope
+        // 1 Block Scope           var declair inside a pair {} access only with in pair not outside
+        // 2 Function Scope        var declair inside a function access only with in function not outside the function
+        // 3 Global Scope          var can b accessed inside a block or function
+
+        // Scope
+        let a = 40;
+        function outer() {
+            let b = 50;
+            function inner() {
+                let c = 60;
+                console.log(a, b, c)
+            }
+            inner()
+        }
+        outer()
+
+        // 1 global var       1 function ky andr var        1 function ky andr function bna ky var add kea sb access ho jay gy
+
+        // Clossure ?
+        // Combination of function boundled together lexical environment.
+        // Jab 1 function k andr 1 aur function create kiya ho. 
+        // To jo inner function hota usy outer function k variables ka access hota.
+        // Isy closure khte.
+
+        // In english
+        // When a function is declared inside another function, the inner function can access the outer function's variables, but the outer function cannot access the inner function's variables. However, if the inner function returns a reference to itself or is passed as an argument to another function, the inner function's variables will be accessible by that function. This creates a closure, which is essentially a reference to the outer function's variables that the inner function can use even after the outer function has returned.
+
+
+        // IMPORTANT POINT:
+        // Nested Function inner function ko khty hain 
+
+        function outer1() {
+            let counter = 0
+            function inner1() {
+                counter++
+                console.log(counter);
+            }
+            inner1()
+        }
+        outer1()
+
+        // Currying:
+        // When a Function insted of talking all arguments   at one time, takes the first one   and return a new function that takes the second one    and return a new function
+        // function f (a,b,c) is transformed to f(a)(b)(c)
+        // eg sum (2,3,5) sum (2)(3)(5)
+
+
+        // Function In Nornal Way
+        // function sum(x, y, z) {
+        //     let d = x + y + z;
+        //     return d;
+        // }
+
+        // let returnvalue = sum(5, 10, 15);
+        // console.log(returnvalue);
+
+        // Function In Currying
+        function sum(x) {
+            return (y) => {
+                return (z) => {
+                    return x + y + z
+                }
+            }
+        }
+
+        // let data = sum(5);
+        // let data2 = data(10);
+        // console.log(data2(15))
+
+        // 2nd way to return data           this is easy method and mostly used
+        let t = sum(15)(15)(15)
+        console.log(t);
+
+
+
+
+
+
+        // Topic Name :  This Keyword
+        // this key word refers to the object it belongs to.
+        // =>when we use this keyword alone than this refers to the global object.    
+
+        // =>In a regular Function this keyword again refers to a global object
+        // agr hm function ky andr this keyword use kry gy to wo global object ko refer kry ga
+
+        // =>In a method this keyword refers to the owner object
+        // Agr hm object ky andr function bna ky wha this kreyword likhy gy to wo owner object ko call kry ga
+        // mtlb jis object ky andr function bna us object ko call kry ga
+
+        // => In a function , in strict mode , this keyword is undefined
+
+
+
+
+        // Prototype
+        // javascript object have a special property called prototype.
+
+        let k = {
+            name: "Mian Tufail",
+            class: "BS IT",
+            skill: "Front End Developer"
+        }
+        console.log(k);
+
+        // ab hm sb prototype console my chla skty hain jo jo avail hain obj my
+        // k.tostring      k.valueoff   etc 
+
+        // =>kya ma is ky prototye ko change kr skta hn ?
+        // definately ma change kr skta hn 
+
+        // new obj bnata hn ...  us ky andr 1 method bnata hn  
+
+        let p = {
+            run: () => {
+                console.log("Run")
+            }
+        }
+
+        k.__proto__ = p
+        k.run()
+
+        // ya hm ny khud sy prototype set kr dea ha ... ab prototype my bydefault waly sary prototype khtm ho ky ya wala a gya ha.
+
+
+
+        // Prototype ka b prototype ho skta ha
+        // p.proto agy new obj alg bnany ke bijay issi line my bna dea ha
+        p.__proto__ = {
+            name1: "Arshi Ameen"
+        }
+
+        console.log(k.name1);
+
+        // mtlb ya ha ky agr hm kisi cheas ko access krty agr ni milti to wo phr us ky prototype my b check kry ga
+        // yha sb sy phly k.name1 obj my check kea ni mila phr us ky prototype my check kea ni mila phr prototpe ky prototype my check kea wha name 1 mil gya us ny print krwa dea. 
+
+
+
+
+
+
+
+        // Prototypal Inheritance:
+
+        // sb sy phly proto object bna laty hain
+        // proto object ha us ky andr 2 functions bnay hain
+        // ya hm abi protypal inheritance ni dakh rhy abi hm obj.create seekh rhy hain
+
+        const proto = {
+
+            slogan: function () {
+                return 'This company is the best';
+            },
+
+            changeName: function (newName) {
+                this.name = newName
+            }
+
+        }
+
+        let harry = Object.create(proto);
+        // console.log(harry)          // srf 1 prototype bna gya khali
+        harry.name = "Harry";
+        harry.role = "Programmer";
+        // console.log(harry)         // obj my name or role add ho gya
+        harry.changeName("Harry2")
+        console.log(harry)            //name change ho gya         
+
+
+
+
+        // Prototypal Inheritance:
+        // ni smj a re
+
+
+
+
+
+
+        // Class In java script
+        // Class is like a templet and object is like information to fill the foam.
+        // class my different methods likhy jaty 1 templet bna laty hain hm.
+        // class and object ... class is like tamplet and object is like information which is fill ni class.
+
+        // class railwayfoam {
+        //     submit() {
+        //         alert(this.name + "Your Foam is Submitted For Train Number" + this.trainno)
+        //     }
+        //     cancel() {
+        //         alert(this.name + "Your Foam is Cancel For Train Number" + this.trainno)
+        //     }
+        //     fill(givenname, trainno) {
+        //         this.name = givenname
+        //         this.trainno = trainno
+        //     }
+        // }
+
+        // // // Create a foam for Harry
+        // let harryFoam = new railwayfoam()
+
+        // // Fill the Foam with Harry,s details
+        // harryFoam.fill("Harry", 125000)
+
+        // // Create a foam for Rohan
+        // let rohanFoam = new railwayfoam()
+
+        // // Fill the Foam with Rohan,s details
+        // rohanFoam.fill("Rohan", 126222)
+
+
+        // harryFoam.submit()
+        // rohanFoam.submit()
+        // rohanFoam.cancel()
+
+
+
+
+
+
+
+        // Iterables and Iterators.
+
+        // Iterators:
+        // phly array bnani ha  ...  us ky bad aopr iterator function bnana ha
+
+        // Iterator function
+        function fruitsitrator(values) {
+            let a = 0;
+            // We will return an object           return kr ra 1 asa object jis my next nam ka function ha  
+            return {
+                next: function () {
+                    if (a < values.length) {
+                        // We will return below object
+                        return {
+                            value: values[a++],
+                            done: false
+                        }
+                    }
+
+                    else {
+                        // We will return below object with only done    yha done ko is leay {} my likha ku ky 1 obj create ha
+                        return {
+                            done: true
+                        }
+                    }
+
+                }
+            }
+        }
+
+        // Array
+        let Array = ["Apples", "Grapes", "Oranges", "Bindi"];
+        console.log("My Array is ", Array);
+
+
+
+        // How We can using tha iterator ?
+        //     var      itrator fun   (array)  
+
+        let fruits = fruitsitrator(Array)
+        console.log(fruits.next().value);
+        console.log(fruits.next().value);
+        console.log(fruits.next().value);
+        console.log(fruits.next().value);
+        console.log(fruits.next().value);       // ya wala undefine aay ga ku ky 4 values hain array ke
+
+        // actually hmy value chahiy hoti yha hmary pas object generate ho ra iterator sy to hm next ky agy . value kr daty hain
+        // phly obj mil ra tha ab values mil re    
+        // iterator ka mtlb array ko travel krna
+
+
+
+
+
+
+        // Generators in java script
+
+        // Array sy hm agr chahy to 1 sy 1 lac tk ka array bna skty hain lkin wo sb memory my save ho jay gy ma ni chahta ky itny bry array 
+        // save krna 
+        // generator ka syntex ?     function bnana function ky bad likh dana * ya hota ha generator ka syntax
+
+        function* NumbersGen() {
+            let i = 0;
+
+            yield 1;
+            yield 2;
+            yield 3;
+            yield 4;
+        }
+
+        let gen = NumbersGen();
+        console.log(gen.next().value);
+        console.log(gen.next().value);
+        console.log(gen.next().value);
+        console.log(gen.next().value);
+        console.log(gen.next().value);
+
+        // this is in the foam of object if we want value paste .value after next
+
+        console.log("We can also write in this foam")
+
+        function* NumbersGene() {
+            let j = 0;
+
+            while (true) {
+                yield j++;
+            }
+        }
+
+        let gene = NumbersGene();
+        console.log(gene.next().value);
+        console.log(gene.next().value);
+        console.log(gene.next().value);
+        console.log(gene.next().value);
+        console.log(gene.next().value);
+        console.log(gene.next().value);
+        console.log(gene.next().value);
+        console.log(gene.next().value);
+        console.log(gene.next().value);
+        console.log(gene.next().value);
+
+
+    </script>
+</body>
+
+</html>

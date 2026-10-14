@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTime Out or ClearTime Out</title>
+</head>
+
+<body>
+    <div class="container">
+        <span id="time"></span>
+    </div>
+
+    <script>
+
+        // In simple Way
+
+        function greet() {
+            console.log("Simple Function");
+        }
+
+        greet();
+
+        // =>SetTime Out or ClearTime Out ?
+        // Jb hm function bnaty hain foran Run ho jata ha
+        // Agr hm chahty hain ky function kuch dar ky bad ya phr
+        // kuch kuch interval ky bad run hota rhy
+        // to ya use kry gy
+
+        function greet1() {
+            console.log("setTimeout after 5 sec");
+        }
+
+        setTimeout(greet1, 5000);
+
+
+        // setTimeout with 1 argument pas
+        function greet2(name) {
+            console.log("setTimeout after 5 sec with 1 argument " + name);
+        }
+
+        setTimeout(greet2, 5000, "Harry");
+
+
+        // Now setTimeout Multiple Arguments Pass
+        function greet3(name, byetext) {
+            console.log("setTimeout after 5 sec with multiple arguments " + name + byetext);
+        }
+
+        setTimeout(greet3, 5000, "Harry ", "Take Care");
+
+
+
+
+
+        // clearTimeout
+        // set time out return krta 1 timeout id 
+        // or phr us id ko use kr skty o clear time out ky sath.
+
+        function greet4(name, byetext) {
+            console.log("Clear Time out " + name + byetext);
+        }
+
+        let timeout = setTimeout(greet4, 5000, "Mian ", "Take Care");
+        clearTimeout(timeout);
+
+
+
+
+
+        // Set Interval
+        // same output print kri jata bar bar    bar bar    bar bar
+
+        function greet5(name, byetext) {
+            console.log("Set Interval " + name + byetext);
+        }
+
+        setInterval(greet5, 1000, "Faisal Ameen ", "Good Night");
+
+
+
+
+        // clearInterval
+        // set interval return krta 1 interval id 
+        // or phr us id ko use kr skty o clear interval ky leay.
+
+
+        function greet6(name, byetext) {
+            console.log("Clear Interval " + name + byetext);
+        }
+
+        intervalid = setInterval(greet6, 1000, "Abu bakar ", "Good Night");
+        clearInterval(intervalid);
+
+
+        // How We can display time ?
+
+        function displayTime() {
+            time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+
+        setInterval(displayTime, 1000);
+    </script>
+</body>
+
+</html>

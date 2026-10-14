@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+    <style>
+        /* // window ka size pta krna ha.
+        // 1 hota inner height or inner width.     inner height or width my page a jata pora lkin aopr wala cross min or max wali line ni ati. ya srf display area ke height or width aii ha .
+        // 1 hota outer height or outer width.     is my aopr wali cross, min, max wo b include ho jata ha overall page. jo jo nzr a ra. */
+        /* for check window height/width */
+        /* body {
+            background-color: red;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- bht sari asi web sites hoti hai jb hm click krty hain to 1 new pop up open krta or us pr add dikhani shuru kr dta .... wo kr ky dakhty hain  ... sb sy phly 1 button bna laty hain jis pr click kry to new pop up open ho ga-->
+
+    <button id="btn1">1st button</button>
+    <button id="btn2">2nd button</button>
+    <button id="btn3">3rd button</button>
+
+
+    <script>
+
+        // console.log(window.innerHeight);
+        // console.log(window.innerWidth);
+
+        // console.log(window.outerHeight);
+        // console.log(window.outerWidth);
+
+
+        // let a = document.getElementById("btn1");
+        // a.addEventListener("click", function () {
+        // window.open();     //yha tk bn gya new page open ho ra button pr click krny sy lkin pop up ni aya us ky leay 3 parameter pass krty hain.
+        // });
+
+
+        let a = document.getElementById("btn1");
+        let url = "https://www.youtube.com/";
+        let features = "height=500px, width=500px";
+        // yha ap let win ko bhol jayo ya last pr use ho ga button ko remove krny ky leay
+        let win;
+
+        a.addEventListener("click", function () {
+            // window.open("url", "name", "features");     nichy wali line my pora url or features b likh skty hain lkin hm alg bna laty.
+            // yha ap win ko bhol jayo ya last pr use ho ga button ko remove krny ky leay
+            win = window.open(url, "youtube", features);
+        });
+
+        // agr 2 button bnaty hm or window.open my dono ka nam same youtube rakhty hain lkin url diff dalty hain to 1st time phly wala url open ho jay ga bad my usi pop up my dosar url open ho jay ga. usi pop up my ho ga bs nam same rakhna .. ya use ha name ka...
+        // work ni kr rha check krwana ha kisi ko
+
+        let b = document.getElementById("btn2");
+        b.addEventListener("click", function () {
+            window.open("https://www.facebook.com/", "youtube");
+        });
+
+
+        // ab window open ho gya usy close krny ka b treeka ha
+
+        let c = document.getElementById("btn3");
+        c.addEventListener("click", function () {
+            // 1st wala close krwana us ky leay jisy bnd krna usy 1 var my save krwana prna ha. yha 1st button ko bnd krna usy var my save krna ha.
+            win.close();
+            // erroe a jay ga ku ky var win bnaya us ka scope global ni ha usy bhir b bna daty
+        });
+
+    </script>
+</body>
+
+</html>

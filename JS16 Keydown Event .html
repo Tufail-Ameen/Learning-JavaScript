@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key down Event</title>
+    <style>
+        #box {
+            height: 100px;
+            width: 100px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box"></div>
+
+    <script>
+        window.addEventListener("keydown", checkkey);
+        function checkkey(e) {
+            console.log(e.key);
+        }
+
+        // 2 event hoty key down jb button dbayo gy to foran print krwa dy ga 
+        // or dosra key up jb button dba ky choro gy tb print krway ga
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Events</title>
+
+    <style>
+        body {
+            height: 2000px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello</h1>
+
+    <script>
+
+        // window.addEventListener("scroll", function () {
+        //     console.log("Scrolling");
+        // });
+
+
+
+
+
+        // hm chahty hain ky 1 condition lgay 500px tk scroll ho ky to pta chl jay ?
+        // use pageYoffset property for vertical   and   pageXoffset property for horizontal
+
+        window.addEventListener("scroll", function () {
+            if (window.pageYOffset > 150) {
+                document.body.style.backgroundColor = "red"
+            }
+            // dbra wapis jay to white b ho jay
+            else {
+                document.body.style.backgroundColor = "white"
+            }
+        });
+
+
+
+
+        // How we can check scroll up or scroll down occurs ? 
+        // use event lisner name wheel
+        // or 1 propert use hoti deltaY for vertical    and    deltaX for horizontal
+
+
+        window.addEventListener("wheel", function (e) {
+            if (e.deltaY < 0) {
+                console.log("Scrolling Up...");
+            }
+
+            else if (e.deltaY > 0) {
+                console.log("Scrolling Down...");
+            }
+        });
+
+    </script>
+</body>
+
+</html>

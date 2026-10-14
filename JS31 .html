@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+
+<body>
+    <h1>Java Script Crash Course</h1>
+
+    <script>
+        console.log("Hello Word");
+
+        // <!-- Variables -->
+
+        let a = 5;
+        let b = 10;
+        console.log("The sum of a and b is", a + b);
+        console.log("The subtraction of a and b is", a - b);
+        console.log("The multiplication of a and b is", a * b);
+        console.log("The division of a and b is", a / b);
+        console.log("The division of a and b is", a ** b);
+        console.log("The incriment of a", a++);
+        console.log("The incriment of a", ++a);
+
+        // let and cont diff
+        let d = 5;
+        d = 10;
+        console.log(d);   //print 10
+
+
+        const e=5;
+              e=10;
+              console.log(e);
+        //  in this care error occur
+
+        // Data Types
+
+        // 1 Premitive
+        // 2 Non Premitive
+
+        // Primitive Includes
+        // String Type
+        // Number Type
+        // Boolean Type
+        // undefined Type
+        // Null Type
+        // Biglnt Type
+        // Symbol Type
+
+        // Non Premitive Includes
+        // Objects
+
+
+        // String
+        const m = "mian";
+        const p = "tufail";
+        const q = "arshi";
+
+        // Number
+        const u = 0;
+        const PI = 3.14;
+
+        // Boolean
+        const isprimsryno = true;
+        const isotherno = false;
+
+        // undefined
+        let result
+        console.log(result);
+
+        // Null
+        const data = null
+
+        // Object
+        let mian = {
+            name: "Mian Tufail Arshi",
+            class: 14,
+            RollNumber: 5847892,
+            postion: 1,
+            SchoollName: "Moon Public School"
+        }
+        console.log(mian);
+
+        // Arrays
+        let tufail = [
+            "Mian Tufail Arshi", 14, 5847892, 1, "Moon Public School"
+        ]
+        console.log(tufail);
+
+        // access any one
+        console.log(tufail[2]);
+
+        // length find
+        console.log(tufail.length);
+
+        // Sort Array
+        let tufailmian = [
+            "Mian Tufail Arshi", 14, 5847892, 1, "Moon Public School"
+        ]
+
+        x = tufailmian.sort();
+        console.log(x);
+
+        // Type Conversions
+        // 1 implicit conversion     js itself will automatically convert the type
+        // 2 explicit conversion     you manually convert the type
+
+        // implicit conversion
+
+        console.log("2" + "3")
+        // result is 23
+
+        console.log("true" + "3")
+        // result is true3
+
+        console.log("4" - "2")
+        // result is 2
+
+        console.log("4" * "2")
+        // result is 8
+
+        console.log("4" / "2")
+        // result is 2
+
+        console.log("5" - true)
+        // result 4 because true 1 and false 0
+
+        console.log("5" - false)
+        // result 5
+
+        console.log("5" - null)
+        // result 5 because null is 0
+
+        console.log("Mian " - "Tufail")
+        // result NAN not a number
+
+        console.log(5 + undefined)
+        // result NAN not a number
+
+
+
+
+
+        // explicit conversion
+
+        console.log(Number("5"))
+        // result 5
+
+        console.log(Number(false))
+        // result 0
+
+        console.log(Number(""))
+        // result 0
+
+
+
+
+        console.log(parseInt("5"))
+        // result 5
+
+
+
+
+        console.log(parseFloat("3.14"))
+        // result 3.14
+
+
+
+
+        console.log(String("500"))
+        // result 500
+
+        console.log(String(true))
+        // result true
+
+        console.log(String(null))
+        // result null 
+
+        console.log(String(undefined))
+        // result undefined
+
+        // alternative to the string ..... global method we use the To String Method
+
+        console.log((500).toString())
+        // result 500
+
+
+
+
+        console.log(Boolean(10))
+        // result true
+
+        // it is work not       null , undefined , numeric 0 , empty string "" , NAN     all return false in Boolean
+        console.log(Boolean(null))
+        console.log(Boolean(undefined))
+        console.log(Boolean(0))
+        console.log(Boolean())
+        console.log(Boolean(NaN))
+
+        // Equality
+        // == allows coercion
+        // === Does not allow coercion
+
+        let var1 = "test"
+        let var2 = "test"
+        console.log(var1 == var2);
+        console.log(var1 === var2);
+        // result true true
+
+        let var3 = 10
+        let var4 = "10"
+        console.log(var3 == var4);
+        console.log(var3 === var4);
+        // result true false
+
+        let var5 = 0
+        let var6 = ""
+        console.log(var5 == var6);
+        console.log(var5 === var6);
+        // result true false
+
+        let var7 = false
+        let var8 = ""
+        console.log(var7 == var8);
+        console.log(var7 === var8);
+        // result true false
+
+        let var9 = null
+        let var10 = undefined
+        console.log(var9 == var10);
+        console.log(var9 === var10);
+        // result true false
+
+        // double equal draw incorrect results
+        // triple equal draw correct results
+
+    </script>
+</body>
+
+</html>

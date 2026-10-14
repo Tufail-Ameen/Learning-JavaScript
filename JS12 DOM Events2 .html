@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events 2</title>
+</head>
+<style>
+    #btn {
+        padding: 10px 14px;
+        background-color: red;
+        border: 2px solid black;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    #para {
+        text-align: justify;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit sequi repellendus, sint
+            provident deleniti
+            ex iste, vero dolor perspiciatis id totam quaerat quo porro a ducimus enim animi impedit? Quisquam eveniet
+            temporibus ullam. Enim ipsam alias, earum ut magnam excepturi laudantium temporibus incidunt voluptatibus
+            hic! Voluptas sunt hic deleniti culpa, architecto magnam nam repudiandae accusamus deserunt voluptatem
+            inventore, necessitatibus tenetur animi veniam tempore corporis illum harum nulla delectus? Explicabo eius
+            sit magni aliquam! Magnam nesciunt similique sed, minus repellat quasi. Nam neque voluptate officia quod
+            maiores, commodi nihil minima est veniam corporis ad tenetur beatae dolores nemo voluptates cumque et
+            dignissimos ea quaerat, tempora temporibus? In sint perspiciatis perferendis fugit quae, sit provident
+            animi, sequi exercitationem minus est voluptates explicabo quos! Recusandae tempore vero voluptatem fugiat
+            perferendis inventore magni! Et quasi nesciunt expedita maxime, optio neque similique, atque saepe eius,
+            soluta nihil dolorem! Iure quaerat quisquam quod cumque vero minus sapiente ipsum quidem. Id ipsum similique
+            perspiciatis accusamus deleniti earum laborum adipisci debitis fuga nobis in necessitatibus totam delectus
+            ut aliquam quibusdam aut commodi, officia dignissimos quas facere? Rem, unde aliquam? Cumque inventore rem
+            excepturi iusto, magnam soluta error minima commodi quo, impedit expedita nulla, quasi cum corporis
+            temporibus. Voluptas, magnam repudiandae ratione et vel aliquam libero tenetur a quia sequi provident, eius
+            velit asperiores minima, debitis recusandae voluptatibus natus! Natus in quos quisquam.</p>
+    </div>
+    <!-- click Event -->
+    <button id="btn" onclick="hide()"> Show/Hide</button>
+
+
+    <script>
+        // =>Hm ny 1 Button bnaya ha Html sy or 1 paragraph likha ha 
+        // hm chahty hain ky button pr click kry or paragraph show or hide ho
+        // mtlb click event work kry
+
+        // =>Acha ab hm ny kya krna ha jb button bn gya us ky bad button my hm ny jo event lgana wo likhna 
+        // =>yha hm ny click lgana to button ky andr onclick= agy yha function ka nam likhna or us nam ka function
+        // =>hm ny js file my bna dana ha
+
+
+        function hide() {
+            let btn = document.getElementById("btn");
+            let para = document.getElementById("para");
+
+            // ya condition lga rhy is sy gaib ho jay ga para. lkin dbra click krny sy wapis ni aay ga para.
+
+            // para.style.display="None"
+
+
+            // ab ma chahta hn click kro to dbra sy wapis a jay.
+            // ya jo condition ab lgani ha hm ny is ka mtlb ya ho ga agr 
+            // (para.style.display) khli ni ha to khali ho jay agr khali ha to wapis a jay.
+
+            if (para.style.display != "none") {
+                para.style.display = "None"
+            }
+            else {
+                para.style.display = "block"
+            }
+        }
+
+
+
+
+        // multiple events b lga skty hain 1 cheas pr.
+
+        // let para = document.getElementById("para");
+        // para.addEventListener("mouseover", function run() {
+        //     alert("Mouse Inside");
+        // });
+
+
+
+        // para.addEventListener("mouseout", function run() {
+        //     alert("Mouse Outside");
+        // });
+
+
+
+
+        // multiple events b lga skty hain 1 cheas pr. same aopr wala bs console krwaya ha.
+
+        // let para=document.getElementById("para");
+        // para.addEventListener("mouseover" , function run(){
+        //    console.log("Mouse Inside");
+        // });
+
+        // para.addEventListener("mouseout" , function run(){
+        //    console.log("Mouse Not Went Outside");
+        // });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring, rest Operator and Spread Operator</title>
+</head>
+
+<body>
+    <script>
+
+        // Destructuring ?
+
+        // let array = [2, 4, 6]
+        // let [a, b, c] = array
+        // console.log(a, b, c)
+
+        // let array = [2, 4, 6, 8, 10, 12]
+        // let [a, b, c, d] = array
+        // console.log(a, b, c, d)
+
+        // Rest Operator ?
+
+        // let array = [2, 4, 6, 8, 10, 12]
+        // let [a, b, c, d, ...rest] = array
+        // console.log(a, b, c, d, rest)
+
+        // yah hm 2 ko or 10 12 ko print krty hain
+
+        // let array = [2, 4, 6, 8, 10, 12]
+        // let [a, , , , ...rest] = array
+        // console.log(a, rest)
+
+        // yah hm 2 ko 6 ko or 10 12 14 ko print krty hain
+
+        // let array = [2, 4, 6, 8, 10, 12, 14]
+        // let [a, , b, , ...rest] = array
+        // console.log(a, b, rest)
+
+
+
+
+
+        // Another Example Destructuring
+        // let { a, b } = { a: 1, b: 5 }
+        // console.log(a, b);
+
+
+
+
+
+        // Spread Operator
+        let array = [2, 4, 6, 8, 10, 12, 14]
+        // ma chahta hn is array ko obj my convert kro
+        let obj = { ...array }
+        console.log(obj);
+
+        // 0 1 2 3 4 5 6 ya is kw keys ho gaey ... 2 4 6 8 10 12 14 us ke values ho gaey
+
+
+        function sum(v1, v2, v3) {
+            return v1 + v2 + v3
+        }
+
+        console.log(sum(...array));
+
+        // array my jo 1st 3 counts hain un ka sum ho gya
+
+
+
+        // ya cheaas hm react my bht use kry gy 
+        let obj2 = {
+            name: "main tufail",
+            class: "9th",
+            Roll_no: "bsf1800523"
+        }
+
+        console.log({ ...obj2, name: "Usman Ameen" })
+
+        // Sary ka sara obj wsy e rhy ga bs name change ho jay ga mian tufail sy usman ameen
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoisting</title>
+  </head>
+
+  <body>
+    <script>
+      function hello() {
+        console.log("Mian G");
+      }
+      hello();
+
+      // What is Hoisting ? Means to lift or to pull.
+      // agr hm phly call kr lain or bad my bnay function to bht sari languages sy error a jay ga.
+      // lkin
+      // java script phly sary code ko read krta A to Z code ko is leay error ni aay ga java script my.
+      // java scrip khud e pora code read kr ky function ko aopr rakh ly ga or function jo call kea usy nichy kr dy ga issy khty hain hoisting
+      // ya srf function ky leay ni ha sb cheaso ky leay ha obj function etc
+
+      // 1st
+      Tufail();
+
+      function Tufail() {
+        console.log("Toka G");
+      }
+
+      // In Variables Simple
+      let x;
+      x = 7;
+      console.log(x);
+
+      // Hoisting
+      let y;
+      console.log(y);
+      y = 50;
+
+      // undefine a jay ga ku ? jb hm var declair krty or khali chor daty hain to java script by default undefine kr dta ha var ko
+
+      let z;
+      // z=undefine               asy ho jay ga phr hoisting my b undefine a jay ga ku ky phly e undefine ho chuka tha
+      console.log(z);
+      z = 70;
+
+      // srf var declair ko aopr ly ky jata ya bat yad rakhna value ko ni
+      // agr asy likha ho
+
+      // console.log(p);
+      // p = 80;
+      // let p;
+
+      // srf let p;     aopr jay ga p=80 aopr ni jay ga       Ans undefined
+
+      // Ab var my to ya sb ho gya
+      // kya let or const my b asa hota sb
+      // ANS:   =>  let or const my b hoisting hoti ha lkin
+      // x ko aopr ly ky jany ky bad x ko undefine ni krta by default
+      // error a jay ga cannot access x before initialization
+
+      // console.log(q);
+      // let q;
+      // q = 7;
+
+      // let ky hisab sy to undefined ana chahiay lkin undefined ni aay ga error a jay ga.
+
+      // Last tip
+      u = 4;
+      console.log(u);
+
+      //4 print ho jay ga ku ky java script ka 1 feature ha wo khud e var declair krwa dta ..js smjy ga ap bhol gay var declair krwana .
+      //is leay khud e var declair krwa dy ga
+      //agr hm chahty hain ky khud var na declair krway js to "use scrict"  use kry gy
+
+      // syntex
+      // "use strict"
+      // u = 4;
+      // console.log(u);
+
+      // ab error ana strat ho jay ga khud error lay hain hm
+
+      //  Summary
+      //  mtlb hoisting ka concept var pr applicable ha let or const pr ni ha
+      //  var ko aopr ly jata or undefine kr dta ha
+      //  let or const sy error a jay ga
+    </script>
+  </body>
+</html>

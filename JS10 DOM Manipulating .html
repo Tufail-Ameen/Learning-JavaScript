@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li id="text">Home</li>
+            <li class="container">About</li>
+            <li>Contact Us</li>
+            <li class="container">Services</li>
+            <li class="container container1">More about us</li>
+        </ul>
+        <div id="nav">
+            Another Container
+        </div>
+    </div>
+    <h2>Heading 1</h2>
+    <div id="baki2">
+        <p>Paragraph 1</p>
+        <h2>Heading 2</h2>
+        <p>Paragraph 2</p>
+        <h2>Heading 3</h2>
+        <p>Paragraph 3</p>
+    </div>
+
+    <script>
+        // Important Question For Interview. What is DOM and How DOM works ?
+        
+        //  jb web page load hota ha, browser DOM Tree bna lta ha khud e , is leay bnata ha ky java script sy HTML ko change kr sky.
+        // => is sy hm html jo likhi hoti usy js my access kr skty hain easily.
+        // => change b kr skty hain.
+
+        // => ya 4 main hain access krny or change krny ky leay.
+        // 1 getElementById
+        // 2 getElementsByClassName
+        // 3 quiry selector    (CSS Selector)  we can use all type of psuedo selecters.
+        // 4 quirySelectorAll                  sary ky sary jo match kr rhy hain unhy print kr dta
+
+
+        // getElementById
+        let mian = document.getElementById("text");
+        console.log(mian);
+        // get value 
+        console.log(mian.innerHTML);
+        // set value
+        mian.innerHTML = "<p>Change Home</p>";
+
+        let tufail = document.getElementById("nav");
+        console.log(tufail);
+        console.log(tufail.innerHTML);
+        tufail.innerHTML = "Change Another Container"
+
+
+
+
+
+        // getElementsByClassName
+        let arshi = document.getElementsByClassName("container");
+        console.log(arshi);
+
+        // collection ha 3 ka to mtlb array bn gya ab length b find kr skty hain
+        console.log(arshi.length);
+
+        //  get elem my classes ko hm simple sy ni get or set kr skty => By using for loop and we get or set value
+        for (let i = 0; i < arshi.length; i++) {
+            // get value
+            console.log(arshi[i].innerHTML);
+            // set value
+            arshi[i].innerHTML = "<p>set value here</p>";
+        }
+
+        // Multiple classes wala b select kr skty hain
+        let ameen = document.getElementsByClassName("container container1");
+        console.log(ameen);
+
+        // Accessin console:     because same name ke kafi classess ho skti hain         
+        // container [0]         likh ky access kr skty o   =>get element by class
+        // container [1]         likh ky access kr skty o   =>get element by class
+
+
+
+
+
+        // getElementsBytagName ya b multiple waly my aay ga usi trha get or set krna.
+        let tag = document.getElementsByTagName("h2")
+        for (let i = 0; i < tag.length; i++) {
+            // get value
+            console.log(tag[i].innerHTML);
+            // set value
+            tag[i].innerHTML = "Change Headings";
+        }
+
+
+        // hm chahty hain 1st wali heading na change ho baki 2 ho jay to ?  phly thori html change kro div ky andr rakh lo 2 ko
+        let k = document.getElementById("baki2");
+        let tag1 = baki2.getElementsByTagName("h2")
+        for (let i = 0; i < tag1.length; i++) {
+            // get value
+            console.log(tag1[i].innerHTML);
+            // set value
+            tag1[i].innerHTML = "Change Headings";
+        }
+
+
+
+
+        // CSS Selector    query selector     Most powerfull selector      query selector my phly jo condition satisify krta usy run krta 
+        // yha sb sy phly wali class ko retrurn kr dy ga
+
+        let sel = document.querySelector(".container");
+        console.log(sel);
+
+        let sell = document.querySelector("#nav>li");
+        console.log(sell);
+
+
+
+        // querySelectorAll                     yha same name ke sb classes ko retrurn kr dy ga
+        let selle = document.querySelectorAll("#nav>li");
+        console.log(selle);
+
+    </script>
+</body>
+
+</html>

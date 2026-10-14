@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Browser Object Model</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <script>
+        // BOM my hm ya dakhy gy browser sy intract kasy krna ha Java Script ky through ... 
+        // is my jo main Object hota wo ha window object ... 
+        // jb ap web site open krty o browser us web site ky leay 1 window object open kr dta ha ... 
+
+
+        // jitny b global variable ... var sy bnayo gy wo property bn jay ga window obj ka .
+        // jitna b global function ... bnayo gy automatically method bn jay ga wo window obj ka .
+        // global obj ... bnayo gy to wo sub obj bn jay ga window obj ka.
+
+        // khny ka mtlb jo b cheas ap global bnaty o wo num bn jata window obj ka. 
+
+        var x = "hello";
+        console.log(x);
+        // undefine ni aya bilkul sai kam kr ra is ka mtlb property bn gya
+        console.log(window.x);
+
+
+        function xyz() {
+            console.log("Hy");
+        };
+
+        // xyz();
+        // undefine ni aya bilkul sai kam kr ra is ka mtlb method bn gya
+        window.xyz();
+
+        // window ky bina kasy run krta phr ya ? phly b to hm krty aay hain ... ku ky ya default obj ha browser ka 
+        // alert / conferm or prompt ya b 3 window ka default method ha
+
+    </script>
+</body>
+
+</html>

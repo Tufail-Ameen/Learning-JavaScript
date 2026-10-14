@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appand</title>
+  </head>
+
+  <body>
+    <div id="append">
+      <p id="p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ducimus
+        doloribus beatae veritatis esse placeat.
+      </p>
+    </div>
+
+    <script>
+      // TOPIC NAME Appand
+      // jasy hm content ko replace kr rhy thy ab append krna
+      // append ka mtlb ha jo b content ha usy replace ni krna us ky agy new content jorna ha.
+
+      let usman = document.getElementById("append");
+      // create element and text                  mtlb tag or us ky andr wala text create kea
+      let faisal = document.createElement("h1");
+      let text = document.createTextNode("this is h1 tag after p tag");
+      // element ky andr text daal dea
+      faisal.appendChild(text);
+      // ab dono jo join kr dea
+      usman.appendChild(faisal);
+
+      // ab ma h2 tag bnata hn lkin wo lgayo ga p ky bad ni . wo ma lgayo ga body ky bad
+      let villan = document.createElement("h2");
+      let malika = document.createTextNode("ya h2 body ky bahir lgana");
+      villan.appendChild(malika);
+      document.body.appendChild(villan);
+
+      // jo span bnaya hm ny ab us pr class/id lgana to kasy lgay gy us ky leay b 1 property ha.
+      let ali = document.getElementById("append");
+      let baba = document.createElement("span");
+      // class lgaty hain
+      baba.className = "try";
+      // id lgani ha
+      baba.id = "pi";
+      let shwarma = document.createTextNode(
+        "Ali baba shwarma shop kreem park ravi road lahore"
+      );
+      baba.appendChild(shwarma);
+      ali.appendChild(baba);
+
+      // Second method to add text body sy bhir krta add
+      // phly hm 1 method ko use kr ky rhy thy ab hm 1 property ko use kr ky kr rhy hain
+      let bc = document.createElement("h3");
+      // asy add krna text      use textContent
+      bc.textContent = "content added ya b body ky bhir lga ra content";
+      document.body.appendChild(bc);
+
+      // hm chahy to add e ni blky read b kr skty hain is textContent property sy
+      // hm p ka read krty hain Content
+      let para = document.getElementById("p");
+      console.log(para.textContent);
+    </script>
+  </body>
+</html>

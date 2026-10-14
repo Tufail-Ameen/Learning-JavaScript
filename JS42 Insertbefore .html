@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Before</title>
+</head>
+
+<body>
+    <div id="mian">
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+        <li>List 4</li>
+    </div>
+    <br>
+    <hr>
+    <div id="tufail">
+        <li>List a</li>
+        <li>List b</li>
+        <li>List c</li>
+        <li>List d</li>
+    </div>
+    <br>
+    <hr>
+    <div id="arshi">
+        <li>List 71</li>
+        <li>List 72</li>
+        <li>List 73</li>
+        <li>List 74</li>
+    </div>
+
+
+    <script>
+        // jb hm Appand sy add krty hain to last pr add hota ha let supoose list ha 4 ke agr hm Appand sy text add krty hain to no 5 pr add ho ga lkin hm chahty hain ky no 2 py ya 3 py add ho to us ky leay hm use kry gy Insert Before.
+
+        // is my 2 cheaso ka dahan rakhna zrori hota
+        // 1 select parent krna hota clild ni
+        // 2 position element b chahiay ho ga wo b bnana
+
+        let a = document.getElementById("mian");
+        // tag or text 
+        let b = document.createElement("li");
+        let c = document.createTextNode("New List 5");
+        b.appendChild(c);
+        // position element create
+        let pos = a.firstElementChild;
+        a.insertBefore(b, pos);
+
+
+
+
+        let k = document.getElementById("tufail");
+        // tag or text 
+        let l = document.createElement("li");
+        let m = document.createTextNode("New List 5");
+        l.appendChild(m);
+        // position element create
+        let position = k.firstElementChild.nextElementSibling;
+        k.insertBefore(l, position);
+
+
+
+
+        let r = document.getElementById("arshi");
+        // tag or text
+        let s = document.createElement("li");
+        let t = document.createTextNode("New List 5");
+        s.appendChild(t);
+        // position element create
+        let position1 = r.firstElementChild.nextElementSibling.nextElementSibling;
+        r.insertBefore(s, position1);
+
+        // issi trha 1 position my 1 or next element sibling add kr do last sy phly b lg jay ga.
+
+
+
+
+        // agr hm chahty hain ky sb sy aopr list 5 aay mtlb body ky foran bad to ? body ko parent bna laty hain
+        let ab = document.body;
+        // craet tag or text
+        bc = document.createElement("h1");
+        cd = document.createTextNode("Heading Here");
+        bc.appendChild(cd);
+        // create position element
+        let ef = document.getElementById("mian");
+        ab.insertBefore(bc, ef);
+
+    </script>
+</body>
+
+</html>

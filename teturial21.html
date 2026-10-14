@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment Float and Clear</title>
+    <style>
+*{
+    font-size: medium;
+}
+
+.container{
+width: 900px;
+border: 2px solid purple;
+/* margin: auto; */
+/* agr x my atuo or y my apni mrzi ka krna chahy to */
+margin:  50px auto; 
+}
+
+.item{
+    border: 3px solid black;
+    margin: 12px 3px;
+    padding: 12px 12px;
+    background: rgb(218, 208, 208);
+}
+#fruits{
+float: left;
+width: 50%;
+}
+#computer{
+    float: left;
+width: 50%;
+}
+#stationary{
+    float: left;
+width: 50%;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="fruits" class="item">
+            <h3>Fruit</h3>
+            <p id="fruitpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iste
+                quisquam corrupti aliquid, error magni officia vel porro, repudiandae pariatur rem iusto doloribus
+                deserunt necessitatibus, tenetur nemo repellendus temporibus atque.</p>
+        </div>
+        <div id="Computer" class="item">
+            <h3>Computer</h3>
+            <p id="computerpara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et repellat,
+                consequatur sequi mollitia tempore accusantium maxime natus aut, odit nisi consectetur expedita ex.
+                Dolorem veniam quas cum accusamus sit quidem.</p>
+        </div>
+        <div id="Stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="fruitspara" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque itaque
+                eius neque cum veritatis maxime rerum, id suscipit, ipsum ea tempore officia quo impedit ipsam nisi?
+                Itaque, porro rerum.</p>
+        </div>
+    </div>
+</body>
+
+</html>

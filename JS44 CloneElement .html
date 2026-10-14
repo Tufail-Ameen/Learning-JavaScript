@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Element</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li>Home</li>
+        <li>Service</li>
+        <li>About</li>
+        <li>Contact Us</li>
+    </ul>
+
+    <script>
+        // clone mtlb copy krna .... java script sy dynamicly kasy copy kry gy ?
+        let a = document.getElementById("menu");
+        let b = a.cloneNode(true);
+        console.log(b);
+        // pora ul clone ho gya ha including child elements.
+
+
+        // agr hm true ni likhty to ul clone ho jata. us ka child element clone ni hota.
+        let c = document.getElementById("menu");
+        let d = c.cloneNode();
+        console.log(d);
+        d.id = "mbl";
+
+        // aopr wala appand krty hain jis my sth child b add ha
+        document.body.appendChild(b);
+
+        // ab 1 bat ha dono my id same ho gya nichy waly ke id change kr daty hain agr krni ha to
+        
+    </script>
+</body>
+
+</html>

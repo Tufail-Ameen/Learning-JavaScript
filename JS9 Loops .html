@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops/Looping Code</title>
+</head>
+
+<body>
+    <div class="container">
+        Loops Teturial
+    </div>
+    <script>
+        // Array ko iterate krny ky leay for, for each, for of ya 3 use krny hain.
+        // object ko iterate krny ky leay for in loop use krna ha.
+
+        // FOR LOOP In Simple
+        let i = 0;
+        for (let i = 0; i < 3; i++) {
+            console.log(i);
+        }
+
+        // Arry ko itrate krwany ky leay For loop ko use ? yes
+        let friends = ["Mian ", "Tufail ", "Arshi ", "Ameen ", "AliMuhammad"];
+        for (let i = 0; i < friends.length; i++) {
+            console.log("hello Friend " + friends[i]);
+        }
+
+        // In Modern java script
+        // For each loop
+        let array = ["for each Mian", "for each Tufail", "for each Arshi", "for each Ameen", "for each AliMuhammad"];
+        array.forEach(function f(playboy) {
+            console.log(playboy)
+        });
+
+        // In More Modern java script
+        // For of Loop
+        let array1 = ["For of Mian", "For of Tufail", "For of Arshi", "For of Ameen", "For of Ali Muhammad"];
+        for (element of array1) {
+            console.log(element)
+        }
+
+        // How we can iterate object?   
+        // use for in loop
+        let obj = {
+            name: "mian tufail arshi",
+            salary: "250k",
+            channel: "Code with faisal.com"
+        }
+
+        for (key in obj) {
+            console.log(`The ${key} of employe is ${obj[key]}`)
+        }
+
+
+        // While Loop:
+        // not a dificult near to for loop
+
+        let x = 0;
+        while (x < 4) {
+            console.log(`${x} is less than 4`);
+            x++;
+        }
+
+        // Do While Loop:
+        // ya 1 bar run kry ga e kry ga chahy condition true ho chahy false
+
+        let j = 34;
+        do {
+            console.log(`${j} is less than 4 but we are inside Do While Loop`);
+            j++
+        } while (j < 4);
+
+    </script>
+</body>
+
+</html>

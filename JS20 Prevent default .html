@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default</title>
+    <style>
+        form {
+            padding: 20px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.facebook.com/" target="_blank" id="anchor">Go to facebook</a>
+    <form action="" id="myfoam">
+        Name : <input type="text" placeholder="Type Name Here"> <br> <br>
+        Submit : <input type="submit">
+    </form>
+
+    <script>
+        // Prevent Default kya krta ?
+        // jo b cheas default behaviour ha DOM ka usy change krta ha ...
+        // hm chahty hain Go to facebook pr click krny sy open na ho ... hm double click kry to open ho ... default setting ko change krna
+
+        // single click pr diable krna hm ny
+        let a = document.getElementById("anchor");
+        a.addEventListener("click", function (event) {
+            event.preventDefault();
+        });
+
+        // foam ko b submit ni hony dana
+        let f = document.getElementById("myfoam");
+        f.addEventListener("submit", function (event) {
+            event.preventDefault();
+        });
+
+    </script>
+</body>
+
+</html>

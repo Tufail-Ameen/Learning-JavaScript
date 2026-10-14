@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Prompt or Confirm</title>
+</head>
+
+<body>
+    <div class="container">
+        This is teturial 54
+    </div>
+    <script>
+
+        // Alert:
+        // us wkt use krna jb user ko btana kuch ky asa ho gya.
+        // Alert 1 Function ha jis my 1 mess string dalty hain jo pop up hoti ha ap ky page pr.
+        // Alert does not return anything.
+        alert("This is a message alert");
+
+        // Prompt:
+        // us wkt use krna jb user sy puchna.
+        // Guest by default ha har bar likhna ha. Na b likhy to chl jay ga kam lkin acha lgta likha howa.
+        // chrome browser kuch ni khta agr na likho lkin kuch browsers my complusery ha.
+        let name = prompt("Whit is your name prompt", "Guest");
+        console.log(name);
+
+        // Confirm
+        // us wkt use kea jata jb hm kisi file ko del kr rhy hon.
+        // ya phr koi asa kam jis my user ko 1 bar warning dani pry. 
+        // For the purpose of double check.
+        // ok kro gy to ture print krway ga 
+        // cancel kro gy to false print krway ga
+        // agr hm if else lga ky kuch or likhna chahy to wo b best ha.
+
+        let deletepost = confirm("Do you want to delete this post confirm?");
+        console.log(deletepost);
+
+        if (deletepost) {
+            console.log("Your post has been deleted successfully");
+        }
+        else {
+            console.log("Your post has not been deleted successfully");
+        }
+        
+    </script>
+</body>
+
+</html>

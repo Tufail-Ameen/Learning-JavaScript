@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Load Event</title>
+</head>
+<style>
+    img {
+        width: 500px;
+    }
+</style>
+
+<body>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Pizigani_1367_Chart_10MB.jpg" alt="Image Not Found">
+
+    <script>
+        // page jb load hota to 2 cheasy triger hoti 1st DOM Content Loaded nam ka event triger hota is ka mtlb ha abi HTML load howa ha 
+        // or DOM tree create ho gya ha lkin kisi b trha ke external file ni load hoi jasy css java script images
+        // 2nd load event ya us wkt triger ho ga jb sb kuch download ho jay css java script images all
+
+        window.addEventListener("DOMContentLoaded", function () {
+            console.log("DOM Content Loaded");
+        });
+
+        window.addEventListener("load", function () {
+            console.log("Fully Loaded");
+        });
+
+        // ya load wala thori dar bad load ho ga jb img load ho jay ge ... depend net speed or pic mbs 
+        // ya load event kisi 1 particular cheas pr b lga skty o is time ya lga howa pory page pr mtlb jb css java script img sb load ho ga tb run kry ga .... agr ma chahta hn srf img pr lgy to simple ... img ko id dy ky usy access kr lo ... or us pr lga do
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            This is match object teturial
+        </h1>
+    </div>
+    <script>
+
+        // Printing the Math Object
+        let m = Math;
+        console.log(Math);
+
+        // Printing the constants of Math Object
+        console.log("The value of Math.E is", Math.E)
+        console.log("The value of Math.PI is", Math.PI)
+        console.log("The value of Math.LN2 is", Math.LN2)
+        console.log("The value of Math.SQRT1_2 is", Math.SQRT1_2)
+        console.log("The value of Math.LOG2E is", Math.LOG2E)
+
+        // Printing the Functions of Math Object
+        //    1  Math.round function
+        let a = 65.2498168;
+        let b = 28.5498115;
+        console.log("The value of a and b is", a, b);
+        console.log("The value of a and b is", Math.round(a), Math.round(b));
+
+        // Power Function
+        console.log("3 raised the power of 2", Math.pow(3, 2));
+        console.log("2 raised the power of 12", Math.pow(2, 12));
+        console.log("1 raised the power of 2", Math.pow(1, 2));
+
+        // Square Root Function     Square Root Function
+        console.log("Square root of 36 is", Math.sqrt(36));
+        console.log("Square root of 25 is", Math.sqrt(25));
+        console.log("Square root of 85 is", Math.sqrt(85));
+        console.log("Square root of 97 is", Math.sqrt(97));
+
+        // Ceil and floor Function         Rounded up and rounded down
+        console.log("5.8 rounded up to integer is", Math.ceil(5.8));
+        console.log("5.8 rounded down to integer is", Math.floor(5.8));
+
+        // Absolute Function
+        // Negative value ko b positive print krway ga
+        console.log("Absolute vlue of 5.6 is", Math.abs(5.6));
+        console.log("Absolute vlue of -5.6 is", Math.abs(-5.6));
+
+        // Trignometric Functions
+        console.log("The value of sin(pi) is", Math.sin(Math.PI));
+        console.log("The value of sin(pi) is", Math.sin(Math.PI / 2));
+
+        console.log("The value of cos(pi) is", Math.cos(Math.PI));
+        console.log("The value of cos(pi) is", Math.cos(Math.PI / 2));
+
+        console.log("The value of tan(pi) is", Math.tan(Math.PI));
+        console.log("The value of tan(pi) is", Math.tan(Math.PI / 2));
+
+        // Min or Max Function
+        console.log("The minimun value of 5, 15, 18 is", Math.min(5, 15, 18));
+        console.log("The minimun value of 385, 225, 115 is", Math.min(385, 225, 115));
+
+        console.log("The maximun value of 5, 15, 18 is", Math.max(5, 15, 18));
+        console.log("The maximun value of 385, 225, 115 is", Math.max(385, 225, 115));
+
+        // Generating a random number
+        let r = Math.random();
+        console.log("The random number is", r);
+        // 0 sy 1 ky darmyan num print ho jay ga
+
+
+        // hm chahty hain ky 1 sy 100 ky darmyan num print ho
+        // Formula
+        // Random Number b/t (a, b) = a + (b-a)*Math.random()
+        let a1 = 1;
+        let b1 = 100;
+        let r1_100 = a1 + (b1 - a1) * Math.random()
+        console.log("The random number is", r1_100);
+
+        // 30 sy 40 ky darmyan print ho
+        let a2 = 30;
+        let b2 = 40;
+        let r30_40 = a2 + (b2 - a2) * Math.random()
+        console.log("The random number is", r30_40);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations and keyframes</title>
+</head>
+<style>
+    .container {
+        background-color: blue;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    /* 1st Method */
+
+    /* .box {
+        font-size: 30px;
+        background-color: red;
+        width: 250px;
+        height: 250px;
+        position: relative;
+
+        animation-name: mian1;
+        animation-duration: 1s;
+        animation-iteration-count: 5;
+        animation-timing-function: ease-out;
+        animation-delay: 2s;
+        animation-direction: reverse;
+    }
+
+
+    @keyframes mian1 {
+        from {
+            width: 200px;
+        }
+
+        to {
+            width: 1400px;
+        }
+    } */
+
+
+    /* 2nd Method */
+
+    .box {
+        font-size: 30px;
+        background-color: red;
+        width: 250px;
+        height: 250px;
+        position: relative;
+
+        animation-name: mian2;
+        animation-duration: 8s;
+        animation-iteration-count: 5;
+
+        animation-timing-function: ease-out;
+        animation-delay: 2s;
+        animation-direction: reverse;
+
+    }
+
+
+    @keyframes mian2 {
+        0% {
+            top: 0px;
+            left: 0px;
+        }
+
+        25% {
+            top: 250px;
+            left: 0px;
+        }
+
+        75% {
+            top: 250px;
+            left: 250px;
+        }
+
+        100% {
+            top: 0px;
+            left: 250px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            Mian Tufail Arshi
+            Graguated from Univeristy Of Education Township Campus Lahore with 3.06 CGPA Almaddullah
+        </div>
+    </div>
+</body>
+
+</html>

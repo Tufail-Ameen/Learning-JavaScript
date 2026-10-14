@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Style</title>
+  </head>
+
+  <body>
+    <button id="btn" style="text-align: center">INBOX</button>
+
+    <script>
+      let a = document.getElementById("btn");
+
+      // 3 methods to style css with the help of java script
+      // 1st method
+      // a.style.cssText = "background-color: red ; color: white"
+
+      // 2nd method
+      // a.setAttribute("style", "background-color:blue ; color:white ");
+
+      // 3rd method
+      a.style.color = "white";
+      a.style.backgroundColor = "black";
+      a.style.border = "2px solid red";
+      a.style.fontSize = "20px";
+
+      // 1 problem ha ... jo phly sy inline styling hota wo hta dta ya jo hm aopr html code my ke ha. 1st 2 case my.
+      // jo 1st or 2nd method ha na wo replace kr dta mtlb agr html my style my 1 property lgi ha or nichy in 2 methods my sy koi lga to
+      // replace kr dy ga aopr wala hta dy ga. nichy wala chly ga.
+      // lkin agr 3rd method use kr rhy to wo add kr dy ga mtlb aopr html my color yha white or 3rd method sy bg color blue dono chl jay ge.
+
+      // hm chahty hain 1st method my b add ho replace na ho to concationate + ka sign use kr lana
+      // a.style.cssText += "background-color: red ; color: white"
+    </script>
+  </body>
+</html>

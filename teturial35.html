@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS VARIABLES/Custom properties</title>
+</head>
+<style>
+    :root {
+        --radius: 40px;
+    }
+
+    .box {
+        --color: Orange;
+        --size: 50px;
+        --text: center;
+        background-color: var(--color);
+        font-size: var(--size);
+        box-shadow: 5px 5px 10px 10px var(--color);
+        height: 300px;
+        width: 500px;
+        color: white;
+        border: 2px solid white;
+        margin: 2px 9px;
+        border-radius: var(--radius);
+        text-align: var(--text);
+    }
+
+    .container {
+        height: 700px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        --color: rgb(114, 114, 150);
+        background-color: var(--color);
+        border-radius: var(--radius);
+        font-size: 22px;
+        color: white;
+    }
+
+    h1 {
+        height: 80px;
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <h1>CSS VARIABLES/CUSTOM PROPERTIES</h1>
+    <div class="container">
+        <div class="box">Mian Tufail Arshi Ameen</div>
+        <div class="box">Mian Tufail Arshi Ameen</div>
+        <div class="box">Mian Tufail Arshi Ameen</div>
+    </div>
+</body>
+
+</html>

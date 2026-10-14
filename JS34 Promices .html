@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promices</title>
+</head>
+
+<body>
+    <script>
+        // Next Topic Promisess
+
+        // let promise = new Promise((resolve, reject) => {
+        //     console.log("Mian Tufail");
+        //     resolve(56);
+        // })
+
+
+        // console.log("Hello 1"); // wsy e print kea
+
+        // setTimeout(() => {
+        //     console.log("hello 2 in after 2 seconds");
+        // }, 2000);
+
+        // console.log("Hello 3"); // wsy e print kea
+
+        // // // ab dakty hain promises kya ha sb sy aopr likhty hain ab
+        // console.log(promise);
+
+
+
+
+        // promise ky andr 2 properties hoti hain 1 state or 1 result
+        // state initally pending phr resolve ya reject ho jati ha
+        // result ya to resolve ya to reject ... Resolve ho gaey to value dy ge agr reject hoi to error dy ge...
+
+        // Why we use promices ?
+        // Use for parallel exicution ... paraller cheeso ko chlany ky leay
+        // Fetch Google.com home page jb ya ho jay to mess print ho console.log(google.com home page done)
+        // Fetch data from the data API
+        // Fetch picture from the server
+        // print downloading
+        // Rest of the script
+
+        // promice ky syntax ky andr jo likhna ha us ka mtlb ka wo background my exicute ho jay ge or jb wo exicute ho jay ge to
+        // notify kr dea jay ga ...kasy ??? .than or.catch sy
+
+
+
+
+        let p1 = new Promise((resolve, reject) => {
+            console.log("Promice is pending");
+            setTimeout(() => {
+                console.log("I am promice and I am fulfilled");
+                resolve(true);
+            }, 5000);
+        })
+
+
+        let p2 = new Promise((resolve, reject) => {
+            console.log("Promice is pending");
+            setTimeout(() => {
+                console.log("I am promice and I am rejected");
+                reject(new Error("i am an error"))
+            }, 5000);
+        })
+
+        console.log(p1, p2);
+
+
+
+
+
+        // resolve jb ho ge to 1 value dy ge ... reject jb ho ge error dy ge
+
+        // is trha promice ko run krna .. ap ky pas 50 promices ho gy to b 50 ky 50 at a time exicute ho jay gy ... or exicution
+        // ky bad ap ko notify kr dea jay ga.
+
+
+
+        // ma chahta hn ky jasy e p1 complete ho jay to koi kam krna ... print ni krna ... to kasy kry gy ?
+        // promice name.then sy
+        // or agr error ko khtm krna to ?
+        // promice name.catch
+
+
+        // To get the value
+
+        p1.then((value) => {
+            console.log(value);
+        });
+
+        // To catch the error
+        p2.catch((value) => {
+            console.log("Some error occur in p2");
+        });
+
+
+
+
+        // error ko handel kr lea hm ny .catch sy ab error ni a ra
+
+
+
+
+        // Promise Chaning ?
+
+
+        // let p11 = new Promise((resolve, reject) => {
+        // setTimeout(() => {
+        // console.log("Resolved after 2 sec");
+        // resolve(56);
+        // }, 2000);
+        // })
+
+
+        // p11.then((value) => {
+        // console.log(value);
+        // let p12 = new Promise((resolve, reject) => {
+        // setTimeout(() => {
+        // resolve("Promice two")
+        // }, 2000);
+        // })
+        // return p12
+        // }).then((value) => {
+        // console.log("We are done")
+        // })
+
+
+
+
+        // Load Script function ko promices sy likh ky dikhayo ?
+
+
+
+
+        // function loadScript(src) {
+        //     return new Promise((resolve, reject) => {
+        //         var script = document.createElement('script');
+        //         script.src = src;
+        //         document.body.appendChild(script);
+        //         script.onload = () => {
+        //             resolve("Script has been loaded Sir")
+        //         }
+        //         script.onerror = () => { reject(0) }
+        //     })
+        // }
+
+        // let p3 = loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js")
+
+        // p3.then((value) => {
+        //     console.log(value)
+        // }).catch((error) => {
+        //     console.log("We are Sorry but we are having problems loading this script")
+        // })
+
+
+
+
+        // is time script thek ha to mess print ho ra loaded wala agr script my msla ho ga to we are sorry wala load ho ga.
+        // yha ma with out call back hell jitni dil kry scripts load kr skta hn without code horizontal barhay
+
+
+        // Apny promices my 1 sy zyada handlers kasy attach kr skty hain ?
+
+
+
+
+        // let p45 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         alert("Hey i am not resolved")
+        //         resolve(786)
+        //     }, 2000);
+        // })
+
+        // p45.then(() => {
+        //     console.log("Congrulations this promice is now resolved")
+        // })
+
+
+
+
+        // // ma chahta hn is mess ky sth sth ma or b kuch kro
+
+
+
+
+        // p45.then(() => {
+        //     console.log("Hurray")
+        // })
+
+
+
+
+        // is trha ma multiple handlers attach kr skta hn
+
+        // Diff between promice chaning or attach handlers ?
+        // promice chaning my 1 result a jay ga us ko use kr ky next kam than again and again.
+        // attach handlers my ya hota 1 promice pr jitny mrzi handlers attach kr lo ... us my asa ni hota ky pichla result aay
+        // ga phr us sy agy kam krna asa ni hota
+
+
+
+
+
+
+        // Promica API
+        // 6 Primary Methods of Promices API:
+        // 1st Method Promise.all
+
+
+
+
+        // p78 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 1")
+        //     }, 1000);
+        // })
+
+        // p79 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 2")
+        //     }, 2000);
+        // })
+
+        // p80 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 3")
+        //     }, 3000);
+        // })
+
+
+        // p78.then((value) => {
+        //     console.log(value)
+        // })
+
+        // p79.then((value) => {
+        //     console.log(value)
+        // })
+
+        // p80.then((value) => {
+        //     console.log(value)
+        // })
+
+        // ya 3 hide kr daty hain filhal
+
+
+        // ma chahta hn jb tino resolve ho jay tb ap tino value 1 sth kasy print kro gy ?
+        // jb tino ke tino promices resolve ho jay ge tb ma mess chahta hn
+
+
+
+
+        // p78 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 1")
+        //     }, 1000);
+        // })
+
+        // p79 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 2")
+        //     }, 2000);
+        // })
+
+        // p80 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 3")
+        //     }, 3000);
+        // })
+
+        // let Promise_all = Promise.all([p78, p79, p80])
+        // Promise_all.then((value) => {
+        //     console.log(value)
+        // })
+
+
+
+
+
+
+        // 2nd Method Promise.allSelected
+
+        // agr ap ky 2 promices resolve hain or 1 reject ha console my error a jay ga hm chahty baki 2 chly error na aay to use krna promice.all_Settled
+        // andr dakhny ko mily ga status or reason error ni aay ga
+
+
+
+
+        // p81 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 1")
+        //     }, 1000);
+        // })
+
+        // p82 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         reject("Value 2")
+        //     }, 2000);
+        // })
+
+        // p83 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 3")
+        //     }, 3000);
+        // })
+
+        // let Promise_all1 = Promise.allSettled([p81, p82, p83])
+        // Promise_all1.then((value) => {
+        //     console.log(value)
+        // })
+
+
+
+
+
+
+
+        // 3rd Method Promise.race ... jo sb sy phly ho jay ga wo print kr dea jay ga.
+
+
+        // p84 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 1")
+        //     }, 1000);
+        // })
+
+        // p85 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 2")
+        //     }, 2000);
+        // })
+
+        // p86 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 3")
+        //     }, 3000);
+        // })
+
+        // let Promise_all2 = Promise.race([p84, p85, p86])
+        // Promise_all2.then((value) => {
+        //     console.log(value)
+        // })
+
+
+
+
+        // 4th Method
+        //  Promise.any         
+        // opposite to promise.race .... 
+        // is my b sb sy phly wala result print kry ga ... 
+        // lkin sb sy phly wala agr reject howa to us ky bad jo ho ra usy kr dy ga ... 
+        // agr koi b resolve na pra howa tu phr wo majboran error dy ga other wise error ni dy ga ... 
+        // us error ka name ho ga Aggricate error
+
+
+
+
+        // p87 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         reject("Value 1")
+        //     }, 1000);
+        // })
+
+        // p88 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         reject("Value 2")
+        //     }, 2000);
+        // })
+
+        // p89 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value 3")
+        //     }, 3000);
+        // })
+
+        // let Promise_all3 = Promise.any([p87, p88, p89])
+        // Promise_all3.then((value) => {
+        //     console.log(value)
+        // })
+
+
+
+        // 5th promise.resolve
+        // 5=6th promice.reject
+
+    </script>
+</body>
+
+</html>

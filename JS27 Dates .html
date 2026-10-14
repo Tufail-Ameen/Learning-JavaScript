@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Dates</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a Container
+    </div>
+
+    <script>
+        // =>object ha ya 1 
+        // =>we write in the foam of object
+
+        console.log("This is Date and Time Teturial");
+
+        let a = new Date();
+        console.log(a);
+
+        // =>1000 mili sec agy ka time btay ga yha
+        // New Format
+        let b = new Date(1000);
+        console.log(b);
+
+        // New Format
+        let c = new Date("2001-10-20");
+        console.log(c);
+
+        // New Format
+        // let now4= new Date(year, month, date, hours, minutes, seconds, milliseconds);    misec ni show krta
+        let p = new Date(2032, 4, 20, 15, 25, 50, 30);
+        console.log(p);
+
+        // single single cheas b nikal skty is my sy hm
+        let yr = p.getFullYear();
+        console.log("The Year is", yr);
+
+        let dt = p.getDate();
+        console.log("The Date is", dt);
+
+        let month = p.getMonth();
+        console.log("The Month is", month);
+
+        let hr = p.getHours();
+        console.log("The hours is", hr);
+
+        // .Set Function
+        p.setDate(26);
+        p.setMonth(3);
+        console.log(p); 
+    </script>
+</body>
+
+</html>

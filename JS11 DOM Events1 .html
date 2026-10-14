@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Events 1</title>
+  </head>
+
+  <style>
+    #btn {
+      font-size: 25px;
+      font-weight: bolder;
+      background-color: aqua;
+      color: black;
+    }
+
+    #btn1 {
+      font-size: 25px;
+      font-weight: bolder;
+      background-color: aqua;
+      color: blue;
+    }
+
+    #btn2 {
+      font-size: 25px;
+      font-weight: bolder;
+      background-color: aqua;
+      color: red;
+    }
+  </style>
+
+  <body>
+    <button id="btn" onclick="btnclick()">Click ME</button>
+    <button id="btn1">Click ME</button>
+    <button id="btn2">Click ME</button>
+
+    <script>
+      // =>Event kya hota ha ?
+      // Event 1 signal hota ha ky kuch howa ha.
+      // mtbl button pr click kea ya mouse scroll howa ya kuch b howa
+      // =>Event fire ka mtlb ha event howa ha.
+      // =>Event mtlb koi state change howa ya user ny koi action lea.
+      // Many types of events check list at google
+      // Events:
+      // click
+      // context menu
+      // mouseover    mouse button element ky andr ly ky jana
+      // mouseout     mouse button element ky bhir ly ky jana
+      // mousedown    mouse button nichy aya
+      // mouseup      mouse button aopr aya
+      // mousemove
+      // submit
+      // focus
+      // DOM content loaded
+      // transitional end
+      // =>these all are events (NOT LEARN)
+
+      // 3 methods sy ap 1 event ko register kr skty o ?
+
+      // 1 Method... Inline             is my har event ky leay proper nam ha jasy click event ky leay ha onclick or andr function ka nam likh dana script my  function bna dana simple.
+
+      function btnclick() {
+        console.log("Button was clicked using inline method");
+      }
+
+      // 2 Method... Event Lisner...  2 parameter pass kry gy 1 event name or dosra function name ... event name " " my function wsy e.
+
+      function btnclick1() {
+        console.log("Button was clicked using event lisner");
+      }
+
+      let a = document.getElementById("btn1");
+      a.addEventListener("click", btnclick1);
+
+      // event lisner waly my hm alg function na b bnay to kam chl jata ha jha function name likhna wha anonymous function lga do
+
+      let z = document.getElementById("btn2");
+      z.addEventListener("click", function () {
+        console.log("Button was clicked using anonymous function");
+      });
+
+      // 1 button pr multiple events lga skty o chlo last waly pr lga ky dakhyty hain
+      z.addEventListener("mouseover", function () {
+        alert("Mouse Over is activated");
+      });
+
+      z.addEventListener("mouseout", function () {
+        alert("Mouse Out is activated");
+      });
+    </script>
+  </body>
+</html>

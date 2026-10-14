@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Event Lisner</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <button id="btn"> COME IB</button>
+
+    <script>
+        // jasy hm multiple event lisner 1 element pr lga skty issi trha .... issi trha same event lisner b ap multiple time lga skty o.
+        let a = document.getElementById("btn");
+
+        function click1() {
+            console.log("Click1 Activated");
+        }
+
+        function click2() {
+            console.log("Click2 Activated");
+        }
+
+        a.addEventListener("click", click1);
+        a.addEventListener("click", click2);
+
+
+        // Remove event lisner
+        // ya srf us wkt use kr skty hain hm ... jb add event lisner sy e kea ho or second ya ky alg sy function bnaya ho
+        // ananoymous function na bnaya ho us wkt ya work kry ga ... otherwise ya work ni kry ga.
+
+        a.removeEventListener("click", click2);
+
+    </script>
+</body>
+
+</html>

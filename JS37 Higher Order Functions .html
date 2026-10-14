@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Functions</title>
+</head>
+
+<body>
+    <script>
+        // Higher Order Functions are functions that take other functions as arguments or return functions as their results
+        // ya ma use kr skta ... ma chahta jitny canidates aay sb ky leay diff diff questions ho
+        // agr 1 function as a result function e return kr ra that is your higher order function
+
+        const interview_question = (name) => {
+            if (name === "Mian") {
+                return function (topic) {
+                    console.log(`hii ${name}. What is ${topic}? Plz Explain Us `)
+                }
+            }
+
+            if (name === "Tufail") {
+                return function (topic) {
+                    console.log(`hii ${name}. What is ${topic}? Plz Explain Us `)
+                }
+            }
+
+            if (name === "Arshi") {
+                return function (topic) {
+                    console.log(`hii ${name}. What is ${topic}? Plz Explain Us `)
+                }
+            }
+            else {
+                return function () {
+                    console.log("Welcome to interview")
+                }
+            }
+        }
+
+        // Higher Order Function ko call krny ky leay double paranthesis ka use krty hain.
+
+        interview_question("Mian")("UI");
+        interview_question("Tufail")("Full stack developer");
+        interview_question("Arshi")("Front End developer");
+
+        // var my store krwa ky b call kr skty hain
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tufail Fitness Gym</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <Style>
+        /* CSS RESET */
+        body {
+            color: black;
+            margin: 0px;
+            padding: 0px;
+            background-image: url('https://img.freepik.com/free-photo/muscular-young-man-lifting-weights-black-background_7502-7692.jpg?w=740&t=st=1669222050~exp=1669222650~hmac=313c1f2167a476a83ee6f847288a719a0d5afc16808c3824c7f4a319d9bdb42d');
+            background-size: cover;
+        }
+
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            top: 2px;
+
+        }
+
+        .left img {
+            width: 100px;
+            margin: 10px;
+        }
+
+        .left h4 {
+            text-align: center;
+            padding: 0px;
+            position: relative;
+            top: -50px;
+        }
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 34px;
+            top: 2px;
+        }
+
+        .btn {
+            margin: 0px 9px;
+            color: rgb(13, 14, 13);
+            /* padding: 11px 6px; */
+            margin: 13px 15px;
+            border: 2px solid black;
+            background-color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            color: blue;
+        }
+
+        .mid {
+            display: block;
+            width: 700px;
+            margin: auto;
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-weight: bold;
+          
+        }
+
+        .navbar li a {
+            padding: 34px 23px;
+        }
+
+        .navbar li a:hover{
+            text-decoration: underline;
+            color: white;
+        }
+
+        .mian {
+            /* border: 2px solid red; */
+            /* box-sizing: border-box; */
+            /* display: flex; */
+            /* flex-direction: column; */
+            margin: 150px;
+        }
+
+        h1{
+            color: white;
+            font-weight: bold;
+            font-size: 28px;
+        }
+    </Style>
+</head>
+
+<body>
+    <Header class="header">
+        <div class="left">
+            <img src="Images/lg.webp" alt="Image Not Found">
+            <h4>Tufail Gym</h4>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contat us</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <button class="btn">Call us now</button>
+            <button class="btn">Email Now</button>
+        </div>
+    </Header>
+    
+    <div class="mian">
+        <h1>Join the Best Gym of Delhi</h1>    
+        <form action="noaction.php">
+            <div>
+                <input type="text" name="my name" placeholder="Enter Your Name">
+            </div>
+            <br>
+            <div>
+                <input type="number" placeholder="Enter Your Age">
+            </div>
+            <br>
+            <div>
+                <input type="text" placeholder="Enter Your Gender">
+            </div>
+            <br>
+            <div>
+                <input type="text" placeholder="Enter Your Locality">
+            </div>
+            <br>
+            <div>
+                <input type="email" name="my email" placeholder="Enter Your Email">
+            </div>
+            <br>
+            <div>
+                <input type="number" name="my number" placeholder=" Enter Your Phone NO:">
+            </div>
+            <br>
+            <div>
+               <input type="submit" value="Submit Now">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

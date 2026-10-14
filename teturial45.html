@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID + MEDIA QURIES</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        nav {
+            grid-area: navbar;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: black;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:500px) {
+            body {
+                background-color: blue;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+
+            aside {
+                display: none;
+            }
+        }
+
+        @media (min-width:500px) and (max-width:800px) {
+            body {
+                background-color: rgb(235, 15, 52);
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+        }
+
+        @media (min-width:800px) {
+            body {
+                background-color: rgb(253, 167, 7);
+            }
+        }
+
+        .bdr {
+            border: 2px solid black;
+            padding: 23px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="bdr">
+            <span>HOME</span>
+            <span>ABOUT</span>
+            <span>CONTACT</span>
+            <span>SERVICES</span>
+        </nav>
+
+        <section class="bdr">
+            <h1>LEARN CSS IN HINDI</h1>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore distinctio beatae iste fugiat voluptas,
+            laborum id? Cum eaque qui accusantium autem. Debitis illo tenetur repellat placeat deleniti perferendis at
+            eveniet dolorum, dignissimos reprehenderit minima, eius impedit consequatur rerum libero quis numquam eaque
+            unde doloremque? Dolor cupiditate recusandae dolore libero laboriosam, tenetur necessitatibus dolorum
+            ratione, quo totam et pariatur iusto beatae eveniet laborum quaerat autem accusantium distinctio incidunt
+            impedit debitis animi molestiae doloremque sint! Iusto temporibus tenetur culpa consequuntur et omnis rerum
+            aliquid reprehenderit repudiandae placeat minus, nesciunt alias nulla nam saepe dolores commodi maiores
+            tempora voluptatem autem. Nobis illo non necessitatibus voluptate voluptates eaque molestias commodi.
+            Corporis aut incidunt vitae eos iure minima itaque praesentium impedit iste, magnam officiis voluptate?
+            Incidunt voluptatem reprehenderit consequatur ipsam, tenetur aspernatur iure. Provident unde ex eveniet
+            pariatur accusantium, neque illum fugiat molestias, doloribus repudiandae veniam officia nam! Ab nostrum
+            officiis id, facere accusamus voluptatem quam maxime, nobis, sint porro beatae eaque excepturi unde
+            architecto neque eos eum harum. Ab ipsam totam cupiditate, quidem cumque temporibus? Nam ipsa velit numquam
+            quis provident eaque consequatur rerum! Necessitatibus sed minus voluptates nam, voluptate reprehenderit
+            aliquid illo ea quae. Commodi totam consequatur accusamus eveniet corrupti deleniti aut fugiat quaerat animi
+            voluptate tempore ipsa, assumenda dignissimos consectetur ratione, provident ea nostrum iusto, itaque
+            repellendus placeat velit autem reiciendis! Laudantium est deleniti accusantium animi placeat distinctio,
+            inventore suscipit eum officiis iste enim ea. Illo cumque voluptatibus quae, ullam maxime illum asperiores
+            ratione similique quia explicabo repellendus eaque dolore nemo eius nostrum minima corporis natus vitae,
+            nesciunt inventore assumenda ducimus unde reprehenderit ipsam! Aut sint deleniti in dolore, sequi
+            repellendus perspiciatis, molestiae quasi, fugiat eligendi autem. Quasi, sint neque incidunt impedit natus
+            quibusdam debitis ducimus doloremque nam? Dolores, eveniet facilis. Et odio deleniti, non quam itaque
+            expedita iste natus debitis quibusdam! Reiciendis.
+        </section>
+
+        <aside class="bdr">
+            <h2>MORE ABOUT US</h2>
+        </aside>
+        <footer class="bdr">
+            Copy Right Code With Harry
+        </footer>
+    </div>
+</body>
+
+</html>

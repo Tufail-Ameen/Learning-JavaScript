@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Filter Reduce</title>
+  </head>
+
+  <body>
+    <script>
+      // Map, Filter and Reduce in java script
+
+      // Array Map Method
+
+      // for each or map my kya difference rah gya ?
+      // map new array bnata ha by performing some operation on each array element
+      // array ky sb elements pr operation operate kr ky 1 new array bnata ha
+
+      // wsy e array bnai
+
+      let array1 = [45, 48, 50];
+      array1.map((value) => {
+        console.log(value);
+      });
+
+      console.log("Array 2 here");
+
+      let array2 = [45, 48, 50];
+      let a = array2.map((value) => {
+        console.log(value);
+        return value + 1;
+      });
+      console.log(a);
+
+      // 3 Arguments hoty hain map my ... value /index /array
+      // hm values ko istmal kr skty hain functions ky andr
+      // phly waly my 0 add kry ga ... dosry waly my 1 ... tisry waly my 2
+
+      console.log("Array 3 here");
+
+      let array3 = [45, 48, 50];
+      let b = array3.map((value, index, array) => {
+        console.log(value, index, array);
+        return value + index;
+      });
+      console.log(b);
+
+      // Array filter Method
+      // 10 sy choti values ko filter krna
+
+      let array4 = [45, 48, 50, 4, 7, 8, 9];
+      let array44 = array4.filter((a) => {
+        return a < 10;
+      });
+      console.log(array44);
+
+      // Array Reduce Method
+
+      let array5 = [45, 48, 50, 4, 7, 8, 9, 45, 48];
+      let array55 = array5.reduce((h1, h2) => {
+        return h1 + h2;
+      });
+      console.log(array55);
+
+      // map or filter 1 Array return krta ... reduce 1 value return krta
+      // reduce phly 2 ka sum kry ga jo ans aay ga us ko 3rd num ky sth add kry ga and so on ...
+    </script>
+  </body>
+</html>

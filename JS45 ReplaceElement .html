@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Element</title>
+</head>
+
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About Us</li>
+    </ul>
+
+    <script>
+        // product ko remove kr ky services bnana chahta hn ... alg alg hm remove b kr skty hain or new add b kr skty hain ... lkin dono cheasy at a time kasy kry gy ya dakhty hai
+
+        let a = document.getElementById("menu");
+
+        // wo bna lo jo add krna 
+        let b = document.createElement("li");
+        let c = document.createTextNode("services");
+        b.appendChild(c);
+
+        // wo select kr lo jo replace krna 
+        let replace = a.firstElementChild.nextElementSibling;
+
+        a.replaceChild(b, replace);
+
+    </script>
+</body>
+
+</html>

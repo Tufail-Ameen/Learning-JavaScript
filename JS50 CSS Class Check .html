@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Class Check</title>
+  </head>
+  <style>
+    .color {
+      background-color: yellow;
+      color: red;
+      font-size: 20px;
+      font-weight: bolder;
+    }
+
+    .dim {
+      border: 1px solid red;
+      padding: 100px;
+    }
+  </style>
+
+  <body>
+    <div id="box" class="color dim">
+      <p>This is dummy text!</p>
+    </div>
+
+    <script>
+      let a = document.getElementById("box");
+      // kn kn c class lgi hoi ha ya check krna ha?
+
+      // 1st method
+      let b = a.className;
+      console.log(b);
+
+      // 2nd method               is method sy jitni b classes lgi hain sb a jay ge or array bn jay ga lkin bs name us ka list ho ga
+      let c = a.classList;
+      console.log(c);
+      // ab array bn gya ... agr in ko 1  1 kr ky access krna to for loop lgaty hain
+      // Using For Loop
+      for (let d of c) {
+        console.log(d);
+      }
+      // add class
+      a.classList.add("vim");
+
+      // remove class
+      // a.classList.remove("dim");
+
+      // replace class
+      // a.classList.replace("dim","replace-class");
+
+      // contains class
+      // check class lga ha ya ni  .... true or false my baty ga ... color nam ka class lga ya ni ?
+      let f = a.classList.contains("color");
+      console.log(f);
+
+      // toggle class
+      // mtlb agr class lgi ha to khtm kr do ni lgai to lga do
+
+      a.classList.toggle("shugal");
+      // phly ni lgai the ab lg gaey ha toggle sy
+
+      // add new class   asy b add kr skty o
+      // a.className += " shim";
+    </script>
+  </body>
+</html>

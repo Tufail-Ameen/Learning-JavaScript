@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <div class="vonatiner">
+        This is a container
+    </div>
+
+    <script>
+        // let name = "Harry"
+        // console.log(name + "is a Good Boy");
+
+        // let name1 = "Mian"
+        // console.log(name1 + "is a Good Boy");
+
+        // let name2 = "Tufail"
+        // console.log(name2 + "is a Good Boy");
+
+        // let name3 = "Arshi"
+        // console.log(name3 + "is a Good Boy");
+
+        // ya sb lengthy ho jana so hm is ky leay Function use kr laty hain
+
+
+        // What is Funxtion ?
+        // Function is a building blocks in java script
+
+        function greet(name, greetText) {
+            console.log(name + "is a Good Boy");
+            console.log(greetText + name);
+        }
+
+        // Value Pass
+        let name = "Mian ";
+        let name1 = "Tufail ";
+        let name2 = "Arshi ";
+        let name3 = "Ameen ";
+
+        let greetText = "Good Morning ";
+
+        // Function Call
+
+        greet(name, greetText);
+        greet(name1, greetText);
+        greet(name2, greetText);
+        greet(name3, greetText);
+
+
+
+
+        // NEXT:
+        // let suppose yha ma greetTest likh dta hn kuch b
+
+        //     function greet (name, greetText("grfeetings from java script"){
+        //     console.log(name + "is a Good Boy");
+        //     console.log(greetText + name);
+        //     }
+
+        // print krwaty wkt srf name likhna ha ... greetings ni likhni ... greeting by default wo likhi jay ge jo ap function bnaty wkt likho gy
+
+
+
+
+        // NEXT Return Value
+        function sum(a, b, c) {
+            let d = a + b + c;
+            return d;
+        }
+        // Value Pass
+        let returnvalue = sum(1, 2, 8);
+        // function call
+        console.log(returnvalue);
+
+
+        // Function Best Practices:
+        // function my return ky bad jo b likho gy wo run ni kry ga
+        // function ko wohi cheas pas krni chahiay jo ky function my use ho re ha
+        // 1 function 1 kam ky leay ap rakhy
+        // function ko easy to read bnana ha
+    </script>
+</body>
+
+</html>
